@@ -1,0 +1,89 @@
+.bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #2c3e50;
+  padding: 15px 20px;
+  color: #ecf0f1;
+  font-size: 18px;
+  border-bottom: 2px solid #3498db; /* Added border */
+  position: fixed;
+  width: 100vw;
+  top: 0;
+  z-index: 1000;
+}
+
+.list {
+  list-style: none;
+  display: flex;
+}
+
+.list li {
+  margin: 0 15px;
+}
+
+.list a {
+  text-decoration: none;
+  color: #ecf0f1;
+  transition: color 0.3s, border-bottom 0.3s; /* Added transition for border */
+  font-size: 16px;
+  border-bottom: 2px solid transparent; /* Added border */
+}
+
+.list > li.active > a {
+  border-bottom: 2px solid #ecf0f1; /* Added border */
+}
+
+.list a:hover {
+  border-bottom: 2px solid #ecf0f1; /* Added border */
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.hamburger span {
+  background: #ecf0f1;
+  width: 25px;
+  height: 3px;
+  margin: 5px;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.hamburger.open span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 6px);
+}
+
+.hamburger.open span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.open span:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -6px);
+}
+
+@media screen and (max-width: 768px) {
+  .list {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background: #2c3e50;
+    padding: 10px;
+    gap: 10px;
+    border-top: 2px solid #3498db; /* Added border */
+  }
+
+  .list.open {
+    display: flex;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+}

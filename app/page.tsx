@@ -1,5 +1,9 @@
-import styles from "./page.module.css";
+import { Container } from "./_components/container/container";
 
 export default function Home() {
-  return <div className={styles.header}>Hello World</div>;
+  return (
+    <Container>
+      <h1>Home Page</h1>
+    </Container>
+  );
 }
