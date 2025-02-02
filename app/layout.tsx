@@ -16,8 +16,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "NEROM",
-  description: "NEROM Engineering & Business Services",
+  title: "NEROM Engineering & Business Services",
+  description:
+    "With expertise in engineering, business strategy, and executive training, we offer comprehensive solutions tailored to meet the modern market's demands.",
 };
 
 export default function RootLayout({

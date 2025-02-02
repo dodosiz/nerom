@@ -1,3 +1,4 @@
+"use client";
 const content = {
   en: {
     navigation: {
@@ -196,7 +197,8 @@ export function useLocalized(key: string, lang: "en" | "el") {
 
 export function useLang(): "en" | "el" {
   const userLanguage = navigator.language || "en";
-  const storedLang = window.localStorage.getItem("lang");
+  const storedLang =
+    typeof window !== "undefined" ? window.localStorage.getItem("lang") : "en";
 
   if (storedLang) {
     return storedLang as "en" | "el";

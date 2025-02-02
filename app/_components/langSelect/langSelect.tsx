@@ -8,8 +8,10 @@ export function LangSelect() {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const handleChange = (event: any) => {
     const newLang = event.target.value as "en" | "el";
-    window.localStorage.setItem("lang", newLang);
-    window.location.reload();
+    if (typeof window !== "undefined") {
+      window.localStorage.setItem("lang", newLang);
+      window.location.reload();
+    }
   };
   return (
     <FormControl
