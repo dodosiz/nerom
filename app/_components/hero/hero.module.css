@@ -1,0 +1,21 @@
+.hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 60vh;
+  background-color: var(--main-dark);
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+}
+
+.title {
+  font-size: 2rem;
+  color: var(--main-light);
+}
+
+.description {
+  font-size: 1rem;
+  color: var(--main-light);
+}

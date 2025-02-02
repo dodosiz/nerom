@@ -1,6 +1,9 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --main-light: #ecf0f1;
+  --main-dark: #2c3e50;
+  --light-border: #3498db;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -33,6 +36,25 @@ body {
 a {
   color: inherit;
   text-decoration: none;
+}
+
+h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: var(--main-dark);
+}
+
+h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: var(--main-dark);
+}
+
+p {
+  margin-bottom: 1rem;
+  color: var(--main-dark);
 }
 
 @media (prefers-color-scheme: dark) {
