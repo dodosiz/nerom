@@ -1,8 +1,3 @@
-const LOREM_EN =
-  "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.";
-const LOREM_EL =
-  "Είμαστε αυτοί που ονειρεύονται, με φως και με σκοτάδι, Στα μονοπάτια της ζωής, με θάρρος και με χάδι. Με γνώση και με πάθος, τον κόσμο εξερευνούμε, Και με καρδιά ανοιχτή, το μέλλον μας υφαίνουμε.";
-
 const content = {
   en: {
     navigation: {
@@ -17,17 +12,23 @@ const content = {
     },
     whoWeAre: {
       title: "Who we are",
-      content: LOREM_EN,
+      first:
+        "Welcome to NEROM Engineering Business & Services, a specialized provider of technical and consulting services. With expertise in engineering, business strategy, and executive training, we offer comprehensive solutions tailored to meet the modern market's demands.",
+      second:
+        "From technical studies and engineering consulting to business advisory and specialized training, NEROM combines expertise with innovation, ensuring high-quality services that drive growth and success for our clients.",
+      third: "Discover how we can help you achieve your goals.",
     },
     expertise: {
       title: "Our expertise",
       engineering: {
         title: "Engineering",
-        description: LOREM_EN,
+        description:
+          "NEROM Engineering Business & Services brings extensive experience in engineering, offering specialized services in design, studies, and technical consulting. With deep expertise in mechanical and chemical projects, we support businesses and professionals with innovative and efficient solutions, ensuring quality, precision, and compliance with the highest standards.",
       },
       business: {
         title: "Business",
-        description: LOREM_EN,
+        description:
+          "At NEROM Engineering Business & Services, we have extensive experience in business consulting, helping companies develop effective strategies and optimize their operations. We offer specialized services in marketing, sales promotion, and executive training, providing practical and innovative solutions that drive growth and competitiveness.",
       },
     },
     services: {
@@ -37,15 +38,41 @@ const content = {
       },
       engineering: {
         title: "Engineering",
-        description: LOREM_EN,
+        description:
+          "At NEROM Engineering Business & Services, we offer a wide range of engineering services, providing technical expertise and innovative solutions for every project. Our experience spans studies, design, and technical consulting, ensuring quality, precision, and compliance with the highest standards.",
+        listTitle: "Our services include:",
+        first:
+          "Technical studies and consulting services for mechanical and chemical projects",
+        second: "Project support from initial conception to implementation",
+        third: "Specialized technical consulting in engineering and design",
+        fourth:
+          "Development of innovative solutions for industrial and technical applications",
       },
       business: {
         title: "Business",
-        description: LOREM_EN,
+        description:
+          "NEROM Engineering Business & Services offers specialized business consulting services, helping companies optimize their strategy, enhance their competitiveness, and achieve sustainable growth. Through targeted solutions and practical advice, we support businesses of all sizes to adapt to the modern market's demands.",
+        listTitle: "Our services include:",
+        first:
+          "Strategic consulting services for business development and optimization",
+        second:
+          "Marketing and sales promotion advice for increased efficiency and brand awareness",
+        third:
+          "Training and development of executives through specialized seminars and educational programs",
+        fourth:
+          "Market and competition analysis, helping businesses make informed decisions",
       },
       other: {
         title: "Other services",
-        description: LOREM_EN,
+        description:
+          "In addition to the above services, NEROM Engineering Business & Services offers additional specialized services that complement and enhance our activities. Our goal is to provide comprehensive solutions that meet the needs of our partners with professionalism and expertise.",
+        listTitle: "Our services include:",
+        first:
+          "Educational seminars and training, aimed at developing skills and professional training",
+        second:
+          "Production of original recordings, covering specialized needs in sound and multimedia",
+        third:
+          "Specialized professional services, tailored to the requirements of each client",
       },
     },
     contact: {
@@ -54,7 +81,10 @@ const content = {
         description: "Happy customers are our first priority",
       },
       title: "Where to find us",
-      content: LOREM_EN,
+      content:
+        "Get in touch with us to learn more about our services or discuss your business needs. You can call us, send us an email, or use our contact form (comming soon).",
+      contactDetails: "Contact details",
+      address: "188 Ipokratous Str., Athens 11471",
     },
   },
   el: {
@@ -66,49 +96,85 @@ const content = {
     },
     hero: {
       title: "NEROM",
-      description: "Σύμβουλοι επιχειρήσεων και μηχανικοί",
+      description: "Engineering & Business Services",
     },
     whoWeAre: {
       title: "Ποιοι είμαστε",
-      content: LOREM_EL,
+      first:
+        "Καλώς ήρθατε στη NEROM Engineering Business & Services, την εξειδικευμένη εταιρεία παροχής τεχνικών και συμβουλευτικών υπηρεσιών. Με εμπειρία στους τομείς του μηχανικού, της επιχειρηματικής στρατηγικής και της εκπαίδευσης στελεχών, προσφέρουμε ολοκληρωμένες λύσεις που ανταποκρίνονται στις σύγχρονες απαιτήσεις της αγοράς.",
+      second:
+        "Από τεχνικές μελέτες και συμβουλευτικές υπηρεσίες μηχανικού έως επιχειρηματική καθοδήγηση και εξειδικευμένη εκπαίδευση, η NEROM συνδυάζει την τεχνογνωσία με την καινοτομία, εξασφαλίζοντας υψηλής ποιότητας υπηρεσίες για την ανάπτυξη και επιτυχία των πελατών της.",
+      third:
+        "Ανακαλύψτε πώς μπορούμε να σας βοηθήσουμε να πετύχετε τους στόχους σας.",
     },
     expertise: {
       title: "Η εμπειρία μας",
       engineering: {
         title: "Μηχανικοί",
-        description: LOREM_EL,
+        description:
+          "Η NEROM Engineering Business & Services διαθέτει εκτενή εμπειρία στον τομέα του μηχανικού, προσφέροντας εξειδικευμένες υπηρεσίες μελέτης, σχεδιασμού και τεχνικών συμβουλών. Με βαθιά γνώση σε μηχανολογικά και χημικά έργα, υποστηρίζουμε επιχειρήσεις και επαγγελματίες με καινοτόμες και αποδοτικές λύσεις, διασφαλίζοντας ποιότητα, ακρίβεια και συμμόρφωση με τα υψηλότερα πρότυπα.",
       },
       business: {
         title: "Σύμβουλοι επιχειρήσεων",
-        description: LOREM_EL,
+        description:
+          "Στη NEROM Engineering Business & Services, διαθέτουμε εκτενή εμπειρία στη συμβουλευτική επιχειρήσεων, βοηθώντας εταιρείες να αναπτύξουν αποτελεσματικές στρατηγικές και να βελτιστοποιήσουν τις λειτουργίες τους. Προσφέρουμε εξειδικευμένες υπηρεσίες σε θέματα μάρκετινγκ, προώθησης πωλήσεων και εκπαίδευσης στελεχών, παρέχοντας πρακτικές και καινοτόμες λύσεις που οδηγούν στην ανάπτυξη και την ανταγωνιστικότητα.",
       },
     },
     services: {
       hero: {
         title: "Υπηρεσίες",
-        description: "Προσφέρουμε μια μεγάλη ποικιλία υπηρεσιών",
+        description: "Προσφέρουμε μια μεγάλη γκάμα υπηρεσιών",
       },
       engineering: {
         title: "Υπηρεσίες μηχανικού",
-        description: LOREM_EL,
+        description:
+          "Στη NEROM Engineering Business & Services, προσφέρουμε ένα ευρύ φάσμα υπηρεσιών μηχανικού, παρέχοντας τεχνική εξειδίκευση και καινοτόμες λύσεις για κάθε έργο. Η εμπειρία μας καλύπτει μελέτες, σχεδιασμό και τεχνικές συμβουλές, εξασφαλίζοντας ποιότητα, ακρίβεια και συμμόρφωση με τα υψηλότερα πρότυπα.",
+        listTitle: "Οι υπηρεσίες μας περιλαμβάνουν:",
+        first:
+          "Τεχνικές μελέτες και συμβουλευτικές υπηρεσίες για μηχανολογικά και χημικά έργα",
+        second: "Υποστήριξη έργων από την αρχική σύλληψη έως την υλοποίηση",
+        third:
+          "Εξειδικευμένες τεχνικές συμβουλές σε θέματα μηχανικής και σχεδιασμού",
+        fourth:
+          "Ανάπτυξη καινοτόμων λύσεων για βιομηχανικές και τεχνικές εφαρμογές",
       },
       business: {
         title: "Συμβουλευτική επιχειρήσεων",
-        description: LOREM_EL,
+        description:
+          "Η NEROM Engineering Business & Services προσφέρει εξειδικευμένες συμβουλευτικές υπηρεσίες, βοηθώντας επιχειρήσεις να βελτιστοποιήσουν τη στρατηγική τους, να ενισχύσουν την ανταγωνιστικότητά τους και να πετύχουν βιώσιμη ανάπτυξη. Μέσα από στοχευμένες λύσεις και πρακτικές συμβουλές, υποστηρίζουμε εταιρείες κάθε μεγέθους να προσαρμοστούν στις σύγχρονες απαιτήσεις της αγοράς.",
+        listTitle: "Οι υπηρεσίες μας περιλαμβάνουν:",
+        first:
+          "Στρατηγικές συμβουλευτικές υπηρεσίες για ανάπτυξη και βελτιστοποίηση επιχειρηματικών διαδικασιών",
+        second:
+          "Συμβουλές μάρκετινγκ και προώθησης πωλήσεων για αύξηση της αποδοτικότητας και του brand awareness",
+        third:
+          "Εκπαίδευση και ανάπτυξη στελεχών μέσω εξειδικευμένων σεμιναρίων και επιμορφωτικών προγραμμάτων",
+        fourth:
+          "Ανάλυση αγοράς και ανταγωνισμού, βοηθώντας τις επιχειρήσεις να λαμβάνουν τεκμηριωμένες αποφάσεις",
       },
       other: {
         title: "Άλλες υπηρεσίες",
-        description: LOREM_EL,
+        description:
+          "Εκτός από τις παραπάνω υπηρεσίες, η NEROM Engineering Business & Services προσφέρει επιπλέον εξειδικευμένες υπηρεσίες που συμπληρώνουν και ενισχύουν το φάσμα των δραστηριοτήτων μας. Στόχος μας είναι η παροχή ολοκληρωμένων λύσεων που καλύπτουν τις ανάγκες των συνεργατών μας με επαγγελματισμό και τεχνογνωσία.",
+        listTitle: "Οι υπηρεσίες μας περιλαμβάνουν:",
+        first:
+          "Εκπαιδευτικά σεμινάρια και επιμορφώσεις, με στόχο την ανάπτυξη δεξιοτήτων και την επαγγελματική κατάρτιση",
+        second:
+          "Παραγωγή πρωτότυπων ηχογραφήσεων, καλύπτοντας εξειδικευμένες ανάγκες σε ήχο και πολυμέσα",
+        third:
+          "Εξειδικευμένες επαγγελματικές υπηρεσίες, προσαρμοσμένες στις απαιτήσεις κάθε πελάτη",
       },
     },
     contact: {
       hero: {
         title: "Επικοινωνία",
-        description:
-          "Οι ευχαριστημένοι πελάτες είναι η πρώτη μας προτεραιότητα",
+        description: "Οι ευχαριστημένοι πελάτες στο κέντρο",
       },
       title: "Που θα μας βρείτε",
-      content: LOREM_EL,
+      content:
+        "Επικοινωνήστε μαζί μας για να μάθετε περισσότερα σχετικά με τις υπηρεσίες μας ή για να συζητήσουμε τις ανάγκες της επιχείρησής σας. Μπορείτε να μας καλέσετε, να μας στείλετε email ή να χρησιμοποιήσετε τη φόρμα επικοινωνίας μας (προσεχώς).",
+      contactDetails: "Στοιχεία επικοινωνίας",
+      address: "Ιπποκράτους 188 , Αθήνα ΤΚ 11471",
     },
   },
 };

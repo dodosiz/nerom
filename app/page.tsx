@@ -16,7 +16,11 @@ export default function Home() {
       />
       <ContentWithTitle
         title={useLocalized("whoWeAre.title", lang)}
-        content={useLocalized("whoWeAre.content", lang)}
+        content={[
+          useLocalized("whoWeAre.first", lang),
+          useLocalized("whoWeAre.second", lang),
+          useLocalized("whoWeAre.third", lang),
+        ]}
       />
       <Divider variant="middle" />
       <GridWithContent

@@ -1,7 +1,11 @@
 "use client";
+import { Container } from "../_components/container/container";
 import { ContentWithTitle } from "../_components/content/contentWithTitle";
 import { Hero } from "../_components/hero/hero";
 import { useLang, useLocalized } from "../localization";
+import EmailIcon from "@mui/icons-material/Email";
+import LocalPhoneIcon from "@mui/icons-material/LocalPhone";
+import BusinessIcon from "@mui/icons-material/Business";
 
 export default function Contact() {
   const lang = useLang();
@@ -14,8 +18,23 @@ export default function Contact() {
       />
       <ContentWithTitle
         title={useLocalized("contact.title", lang)}
-        content={useLocalized("contact.content", lang)}
+        content={[useLocalized("contact.content", lang)]}
       />
+      <Container>
+        <h2>{useLocalized("contact.contactDetails", lang)}</h2>
+        <p style={{ display: "flex", alignItems: "center", gap: "0.5rem" }}>
+          <EmailIcon fontSize="small" />
+          <a href="mailto:k_mavros@hotmail.com">k_mavros@hotmail.com</a>
+        </p>
+        <p style={{ display: "flex", alignItems: "center", gap: "0.5rem" }}>
+          <LocalPhoneIcon fontSize="small" />
+          <a href="tel:+306944322781">+30 694 432 2781</a>
+        </p>
+        <p style={{ display: "flex", alignItems: "center", gap: "0.5rem" }}>
+          <BusinessIcon fontSize="small" />
+          <span>{useLocalized("contact.address", lang)}</span>
+        </p>
+      </Container>
     </main>
   );
 }
