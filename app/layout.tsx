@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { NavigationMenu } from "./_components/navigationMenu/navigationMenu";
 import { Footer } from "./_components/footer/footer";
+import { LangSelect } from "./_components/langSelect/langSelect";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -25,16 +26,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang={"en"}>
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
-        <NavigationMenu
-          items={[
-            { name: "Home", url: "/" },
-            { name: "Services", url: "/services" },
-            { name: "Contact", url: "/contact" },
-          ]}
-        />
+        <NavigationMenu />
         {children}
+        <LangSelect />
         <Footer />
       </body>
     </html>

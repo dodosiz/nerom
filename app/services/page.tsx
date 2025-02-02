@@ -1,53 +1,32 @@
+"use client";
 import { Divider } from "@mui/material";
-import { Container } from "../_components/container/container";
 import { Hero } from "../_components/hero/hero";
+import { ContentWithTitle } from "../_components/content/contentWithTitle";
+import { useLang, useLocalized } from "../localization";
 
 export default function Services() {
+  const lang = useLang();
   return (
     <main>
       <Hero
-        title="Services"
-        description="We offer a wide range of services"
+        title={useLocalized("services.hero.title", lang)}
+        description={useLocalized("services.hero.description", lang)}
         image="/images/hero4.jpg"
       />
-      <Container>
-        <h2>Engineering</h2>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-          culpa qui officia deserunt mollit anim id est laborum.
-        </p>
-      </Container>
+      <ContentWithTitle
+        title={useLocalized("services.engineering.title", lang)}
+        content={useLocalized("services.engineering.description", lang)}
+      />
       <Divider variant="middle" />
-      <Container>
-        <h2>Business consulting</h2>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-          culpa qui officia deserunt mollit anim id est laborum.
-        </p>
-      </Container>
+      <ContentWithTitle
+        title={useLocalized("services.business.title", lang)}
+        content={useLocalized("services.business.description", lang)}
+      />
       <Divider variant="middle" />
-      <Container>
-        <h2>Training</h2>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-          culpa qui officia deserunt mollit anim id est laborum.
-        </p>
-      </Container>
+      <ContentWithTitle
+        title={useLocalized("services.other.title", lang)}
+        content={useLocalized("services.other.description", lang)}
+      />
     </main>
   );
 }

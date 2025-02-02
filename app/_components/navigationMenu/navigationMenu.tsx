@@ -3,6 +3,23 @@ import Link from "next/link";
 import styles from "./navigationMenu.module.css";
 import { usePathname } from "next/navigation";
 import React from "react";
+import { useLang, useLocalized } from "../../localization";
+
+export function NavigationMenu() {
+  const lang = useLang();
+  return (
+    <NavigationMenuInternal
+      items={[
+        { name: useLocalized("navigation.home", lang), url: "/" },
+        {
+          name: useLocalized("navigation.services", lang),
+          url: "/services",
+        },
+        { name: useLocalized("navigation.contact", lang), url: "/contact" },
+      ]}
+    />
+  );
+}
 
 interface MenuEntry {
   name: string;
@@ -13,7 +30,7 @@ interface NavigationMenuProps {
   items: MenuEntry[];
 }
 
-export function NavigationMenu({ items }: NavigationMenuProps) {
+function NavigationMenuInternal({ items }: NavigationMenuProps) {
   const pathname = usePathname();
   const [open, setOpen] = React.useState(false);
   React.useEffect(() => {
