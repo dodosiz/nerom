@@ -83,7 +83,7 @@ const content = {
       },
       title: "Where to find us",
       content:
-        "Get in touch with us to learn more about our services or discuss your business needs. You can call us, send us an email, or use our contact form (comming soon).",
+        "Get in touch with us to learn more about our services or discuss your project and business needs. You can call us, send us an email, or use our contact form (comming soon).",
       contactDetails: "Contact details",
       address: "188 Ipokratous Str., Athens 11471",
     },
@@ -173,7 +173,7 @@ const content = {
       },
       title: "Που θα μας βρείτε",
       content:
-        "Επικοινωνήστε μαζί μας για να μάθετε περισσότερα σχετικά με τις υπηρεσίες μας ή για να συζητήσουμε τις ανάγκες της επιχείρησής σας. Μπορείτε να μας καλέσετε, να μας στείλετε email ή να χρησιμοποιήσετε τη φόρμα επικοινωνίας μας (προσεχώς).",
+        "Επικοινωνήστε μαζί μας για να μάθετε περισσότερα σχετικά με τις υπηρεσίες μας ή για να συζητήσουμε τις ανάγκες της επιχείρησής και του project σας. Μπορείτε να μας καλέσετε, να μας στείλετε email ή να χρησιμοποιήσετε τη φόρμα επικοινωνίας μας (προσεχώς).",
       contactDetails: "Στοιχεία επικοινωνίας",
       address: "Ιπποκράτους 188 , Αθήνα ΤΚ 11471",
     },

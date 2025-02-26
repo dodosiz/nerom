@@ -24,11 +24,19 @@ export default function Contact() {
         <h2>{useLocalized("contact.contactDetails", lang)}</h2>
         <p style={{ display: "flex", alignItems: "center", gap: "0.5rem" }}>
           <EmailIcon fontSize="small" />
-          <a href="mailto:k_mavros@hotmail.com">k_mavros@hotmail.com</a>
+          <a href="mailto:neromebs@gmail.com">neromebs@gmail.com</a>
         </p>
         <p style={{ display: "flex", alignItems: "center", gap: "0.5rem" }}>
           <LocalPhoneIcon fontSize="small" />
           <a href="tel:+306944322781">+30 694 432 2781</a>
+        </p>
+        <p style={{ display: "flex", alignItems: "center", gap: "0.5rem" }}>
+          <LocalPhoneIcon fontSize="small" />
+          <a href="tel:+306955172427">+30 695 517 2427</a>
+        </p>
+        <p style={{ display: "flex", alignItems: "center", gap: "0.5rem" }}>
+          <LocalPhoneIcon fontSize="small" />
+          <a href="tel:+306972239662">+30 697 223 9662</a>
         </p>
         <p style={{ display: "flex", alignItems: "center", gap: "0.5rem" }}>
           <BusinessIcon fontSize="small" />
