@@ -20,12 +20,14 @@ export function LangSelect() {
         position: "fixed",
         bottom: "10px",
         right: "10px",
+        color: "inherit",
       }}
     >
-      <InputLabel id="lang-select">
+      <InputLabel id="lang-select" style={{ color: "inherit" }}>
         {useLocalized("navigation.lang", lang)}
       </InputLabel>
       <Select
+        style={{ color: "inherit" }}
         labelId="lang-select"
         id="demo-simple-select"
         value={lang}

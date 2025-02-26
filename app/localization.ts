@@ -21,10 +21,11 @@ const content = {
     },
     expertise: {
       title: "Our expertise",
+      learnMore: "Learn more",
       engineering: {
         title: "Engineering",
         description:
-          "NEROM Engineering Business & Services brings extensive experience in engineering, offering specialized services in design, studies, and technical consulting. With deep expertise in mechanical and chemical projects, we support businesses and professionals with innovative and efficient solutions, ensuring quality, precision, and compliance with the highest standards.",
+          "NEROM Engineering Business & Services brings extensive experience in engineering, offering specialized services in design, studies, and technical consulting. With deep expertise in architectural, mechanical, software and chemical projects, we support businesses and professionals with innovative and efficient solutions, ensuring quality, precision, and compliance with the highest standards.",
       },
       business: {
         title: "Business",
@@ -43,11 +44,19 @@ const content = {
           "At NEROM Engineering Business & Services, we offer a wide range of engineering services, providing technical expertise and innovative solutions for every project. Our experience spans studies, design, and technical consulting, ensuring quality, precision, and compliance with the highest standards.",
         listTitle: "Our services include:",
         first:
-          "Technical studies and consulting services for mechanical and chemical projects",
+          "Technical studies and consulting services for architectural, mechanical, software and chemical projects",
         second: "Project support from initial conception to implementation",
         third: "Specialized technical consulting in engineering and design",
         fourth:
           "Development of innovative solutions for industrial and technical applications",
+        secondListTitle: "Engineering segments:",
+        secondList: {
+          first: "Space and small space design and construction",
+          second: "Solution/Article design",
+          third: "Energy design and engineering",
+          fourth: "Chemical process engineering",
+          fifth: "Software solutions",
+        },
       },
       business: {
         title: "Business",
@@ -62,6 +71,13 @@ const content = {
           "Training and development of executives through specialized seminars and educational programs",
         fourth:
           "Market and competition analysis, helping businesses make informed decisions",
+        secondListTitle: "Business segments:",
+        secondList: {
+          first: "Product and business development",
+          second: "Operational strategies",
+          third: "Marketing campains",
+          fourth: "Training of commercial effectiveness",
+        },
       },
       other: {
         title: "Other services",
@@ -110,10 +126,11 @@ const content = {
     },
     expertise: {
       title: "Η εμπειρία μας",
+      learnMore: "Μαθετε περισσοτερα",
       engineering: {
         title: "Μηχανικοί",
         description:
-          "Η NEROM Engineering Business & Services διαθέτει εκτενή εμπειρία στον τομέα του μηχανικού, προσφέροντας εξειδικευμένες υπηρεσίες μελέτης, σχεδιασμού και τεχνικών συμβουλών. Με βαθιά γνώση σε μηχανολογικά και χημικά έργα, υποστηρίζουμε επιχειρήσεις και επαγγελματίες με καινοτόμες και αποδοτικές λύσεις, διασφαλίζοντας ποιότητα, ακρίβεια και συμμόρφωση με τα υψηλότερα πρότυπα.",
+          "Η NEROM Engineering Business & Services διαθέτει εκτενή εμπειρία στον τομέα του μηχανικού, προσφέροντας εξειδικευμένες υπηρεσίες μελέτης, σχεδιασμού και τεχνικών συμβουλών. Με βαθιά γνώση σε αρχιτεκτονικά, μηχανολογικά, χημικά και έργα λογισμικού, υποστηρίζουμε επιχειρήσεις και επαγγελματίες με καινοτόμες και αποδοτικές λύσεις, διασφαλίζοντας ποιότητα, ακρίβεια και συμμόρφωση με τα υψηλότερα πρότυπα.",
       },
       business: {
         title: "Σύμβουλοι επιχειρήσεων",
@@ -132,12 +149,20 @@ const content = {
           "Στη NEROM Engineering Business & Services, προσφέρουμε ένα ευρύ φάσμα υπηρεσιών μηχανικού, παρέχοντας τεχνική εξειδίκευση και καινοτόμες λύσεις για κάθε έργο. Η εμπειρία μας καλύπτει μελέτες, σχεδιασμό και τεχνικές συμβουλές, εξασφαλίζοντας ποιότητα, ακρίβεια και συμμόρφωση με τα υψηλότερα πρότυπα.",
         listTitle: "Οι υπηρεσίες μας περιλαμβάνουν:",
         first:
-          "Τεχνικές μελέτες και συμβουλευτικές υπηρεσίες για μηχανολογικά και χημικά έργα",
+          "Τεχνικές μελέτες και συμβουλευτικές υπηρεσίες για αρχιτεκτονικά, μηχανολογικά, χημικά και έργα λογισμικού",
         second: "Υποστήριξη έργων από την αρχική σύλληψη έως την υλοποίηση",
         third:
           "Εξειδικευμένες τεχνικές συμβουλές σε θέματα μηχανικής και σχεδιασμού",
         fourth:
           "Ανάπτυξη καινοτόμων λύσεων για βιομηχανικές και τεχνικές εφαρμογές",
+        secondListTitle: "Τομείς μηχανικής:",
+        secondList: {
+          first: "Σχεδιασμός και κατασκευή χώρων μικρής και μεγάλης κλίμακας",
+          second: "Σχεδιασμός αντικειμένων",
+          third: "Ενεργειακή μηχανική",
+          fourth: "Μηχανική χημικών διεργασιών",
+          fifth: "Λύσεις λογισμικού",
+        },
       },
       business: {
         title: "Συμβουλευτική επιχειρήσεων",
@@ -152,6 +177,13 @@ const content = {
           "Εκπαίδευση και ανάπτυξη στελεχών μέσω εξειδικευμένων σεμιναρίων και επιμορφωτικών προγραμμάτων",
         fourth:
           "Ανάλυση αγοράς και ανταγωνισμού, βοηθώντας τις επιχειρήσεις να λαμβάνουν τεκμηριωμένες αποφάσεις",
+        secondListTitle: "Τομείς συμβουλευτικής επιχειρήσεων:",
+        secondList: {
+          first: "Ανάπτυξη προϊόντων και επιχειρηματικών πλάνων",
+          second: "Επιχειρηματική στρατηγική",
+          third: "Εκστρατείες μάρκετινγκ",
+          fourth: "Εκπαίδευση εμπορικής αποτελεσματικότητας",
+        },
       },
       other: {
         title: "Άλλες υπηρεσίες",

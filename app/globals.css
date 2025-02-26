@@ -3,6 +3,7 @@
   --foreground: #171717;
   --main-light: #ecf0f1;
   --main-dark: #2c3e50;
+  --main-content: #2c3e50;
   --light-border: #3498db;
 }
 
@@ -10,6 +11,7 @@
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
+    --main-content: #ededed;
   }
 }
 
@@ -42,19 +44,19 @@ h2 {
   font-size: 1.5rem;
   font-weight: 600;
   margin-bottom: 1rem;
-  color: var(--main-dark);
+  color: var(--main-content);
 }
 
 h3 {
   font-size: 1.25rem;
   font-weight: 600;
   margin-bottom: 1rem;
-  color: var(--main-dark);
+  color: var(--main-content);
 }
 
 p {
   margin-bottom: 1rem;
-  color: var(--main-dark);
+  color: var(--main-content);
 }
 
 @media (prefers-color-scheme: dark) {

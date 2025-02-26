@@ -4,6 +4,7 @@ import { Hero } from "./_components/hero/hero";
 import { GridWithContent } from "./_components/content/gridWithContent";
 import { ContentWithTitle } from "./_components/content/contentWithTitle";
 import { useLang, useLocalized } from "./localization";
+import { BUSINESS, ENGINEERING } from "./constants";
 
 export default function Home() {
   const lang = useLang();
@@ -28,6 +29,7 @@ export default function Home() {
         size={{ xs: 12, md: 6 }}
         items={[
           {
+            id: ENGINEERING,
             title: useLocalized("expertise.engineering.title", lang),
             description: useLocalized(
               "expertise.engineering.description",
@@ -35,6 +37,7 @@ export default function Home() {
             ),
           },
           {
+            id: BUSINESS,
             title: useLocalized("expertise.business.title", lang),
             description: useLocalized("expertise.business.description", lang),
           },
