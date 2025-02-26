@@ -40,6 +40,13 @@ a {
   text-decoration: none;
 }
 
+h1 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: var(--main-content);
+}
+
 h2 {
   font-size: 1.5rem;
   font-weight: 600;

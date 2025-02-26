@@ -4,6 +4,7 @@ import "./globals.css";
 import { NavigationMenu } from "./_components/navigationMenu/navigationMenu";
 import { Footer } from "./_components/footer/footer";
 import { LangSelect } from "./_components/langSelect/langSelect";
+import { GoogleAnalytics } from "@next/third-parties/google";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -34,6 +35,7 @@ export default function RootLayout({
         <LangSelect />
         <Footer />
       </body>
+      <GoogleAnalytics gaId="G-E4XLKVF21M" />
     </html>
   );
 }

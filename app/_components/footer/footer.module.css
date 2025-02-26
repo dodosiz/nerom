@@ -10,3 +10,7 @@
 .footer p {
   color: var(--main-light);
 }
+
+.footer a {
+  color: var(--main-light);
+}
