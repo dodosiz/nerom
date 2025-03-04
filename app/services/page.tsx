@@ -36,6 +36,11 @@ export default function Services() {
           useLocalized("services.engineering.secondList.fourth", lang),
           useLocalized("services.engineering.secondList.fifth", lang),
         ]}
+        actionButtonLabel={useLocalized(
+          "services.engineering.actionLabel",
+          lang
+        )}
+        actionButtonLink="architecture"
       />
       <Divider variant="middle" />
       <ContentWithList

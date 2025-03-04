@@ -1,3 +1,4 @@
+import { Button } from "@mui/material";
 import { Container } from "../container/container";
 
 interface ContentWithListProps {
@@ -8,9 +9,15 @@ interface ContentWithListProps {
   list: string[];
   secondListTitle?: string;
   secondList?: string[];
+  actionButtonLabel?: string;
+  actionButtonLink?: string;
 }
 
 export function ContentWithList(props: ContentWithListProps) {
+  const goToLink = (link: string) => {
+    window.location.href = `/${link}`;
+  };
+  const link = props.actionButtonLink;
   return (
     <Container>
       <h2 id={props.id}>{props.title}</h2>
@@ -36,6 +43,16 @@ export function ContentWithList(props: ContentWithListProps) {
             ))}
           </ul>
         </>
+      )}
+      {link && (
+        <Button
+          style={{ marginTop: "10px" }}
+          color="inherit"
+          variant="outlined"
+          onClick={() => goToLink(link)}
+        >
+          {props.actionButtonLabel}
+        </Button>
       )}
     </Container>
   );

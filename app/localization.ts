@@ -113,6 +113,7 @@ const content = {
           fourth: "Chemical process engineering",
           fifth: "Software solutions",
         },
+        actionLabel: "Learn more about architecture",
       },
       business: {
         title: "Business",
@@ -158,6 +159,30 @@ const content = {
         "Get in touch with us to learn more about our services or discuss your project and business needs. You can call us, send us an email, or use our contact form (comming soon).",
       contactDetails: "Contact details",
       address: "188 Ipokratous Str., Athens 11471",
+    },
+    architecture: {
+      title: "Architecture",
+      description: "Our architectural services are tailored to meet your needs",
+      projects: {
+        filiates: {
+          title: "Cozy Small House in Filiates",
+          description:
+            "A cozy small house located in the picturesque village of Filiates, offering a peaceful retreat in the heart of nature. The house features a traditional design with modern amenities, providing a comfortable and relaxing environment for its residents.",
+          alt1: "Modern Bathroom",
+          alt2: "Spacious Kitchen",
+          alt3: "Kitchen with Side Table",
+        },
+        lux_home: {
+          title: "Elegant Luxury House",
+          description:
+            "An elegant luxury house designed to offer the ultimate in comfort and style. The house features spacious rooms, modern amenities, and luxurious finishes, creating a sophisticated and welcoming environment for its residents.",
+          alt1: "Modern Kitchen",
+          alt2: "Children's Room",
+          alt3: "Master Bedroom",
+          alt4: "Bedroom and Walk-in Closet",
+          alt5: "Walk-in Closet",
+        },
+      },
     },
   },
   el: {
@@ -275,6 +300,7 @@ const content = {
           fourth: "Μηχανική χημικών διεργασιών",
           fifth: "Λύσεις λογισμικού",
         },
+        actionLabel: "ΜΑΘΕΤΕ ΠΕΡΙΣΣΟΤΕΡΑ ΓΙΑ ΤΗΝ ΑΡΧΙΤΕΚΤΟΝΙΚΗ",
       },
       business: {
         title: "Συμβουλευτική επιχειρήσεων",
@@ -320,6 +346,31 @@ const content = {
         "Επικοινωνήστε μαζί μας για να μάθετε περισσότερα σχετικά με τις υπηρεσίες μας ή για να συζητήσουμε τις ανάγκες της επιχείρησής και του project σας. Μπορείτε να μας καλέσετε, να μας στείλετε email ή να χρησιμοποιήσετε τη φόρμα επικοινωνίας μας (προσεχώς).",
       contactDetails: "Στοιχεία επικοινωνίας",
       address: "Ιπποκράτους 188 , Αθήνα ΤΚ 11471",
+    },
+    architecture: {
+      title: "Αρχιτεκτονική",
+      description:
+        "Οι αρχιτεκτονικές μας υπηρεσίες προσαρμόζονται στις ανάγκες σας",
+      projects: {
+        filiates: {
+          title: "Άνετο Μικρό Σπίτι στους Φιλιάτες",
+          description:
+            "Ένα άνετο μικρό σπίτι που βρίσκεται στο γραφικό χωριό των Φιλιατών, προσφέροντας μια ήσυχη απόδραση στην καρδιά της φύσης. Το σπίτι διαθέτει παραδοσιακό σχεδιασμό με σύγχρονες ανέσεις, παρέχοντας ένα άνετο και χαλαρωτικό περιβάλλον για τους κατοίκους του.",
+          alt1: "Μοντέρνο Μπάνιο",
+          alt2: "Ευρύχωρη Κουζίνα",
+          alt3: "Κουζίνα με Πλαϊνό Τραπέζι",
+        },
+        lux_home: {
+          title: "Κομψό Πολυτελές Σπίτι",
+          description:
+            "Ένα κομψό πολυτελές σπίτι σχεδιασμένο για να προσφέρει την απόλυτη άνεση και στυλ. Το σπίτι διαθέτει ευρύχωρα δωμάτια, σύγχρονες ανέσεις και πολυτελείς φινιρίσματα, δημιουργώντας ένα εκλεπτυσμένο και φιλόξενο περιβάλλον για τους κατοίκους του.",
+          alt1: "Μοντέρνα Κουζίνα",
+          alt2: "Παιδικό Δωμάτιο",
+          alt3: "Κύρια Κρεβατοκάμαρα",
+          alt4: "Κρεβατοκάμαρα και Δωμάτιο-Ντουλάπα",
+          alt5: "Δωμάτιο-Ντουλάπα",
+        },
+      },
     },
   },
 };

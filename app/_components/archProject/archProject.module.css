@@ -1,0 +1,15 @@
+.imagesContainer {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  flex-direction: column;
+  padding: 20px 5%;
+  gap: 20px;
+}
+
+.imageContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+}

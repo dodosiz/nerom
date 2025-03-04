@@ -15,6 +15,10 @@ export function NavigationMenu() {
           name: useLocalized("navigation.services", lang),
           url: "/services",
         },
+        {
+          name: useLocalized("architecture.title", lang),
+          url: "/architecture",
+        },
         { name: useLocalized("navigation.contact", lang), url: "/contact" },
       ]}
     />
