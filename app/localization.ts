@@ -111,7 +111,7 @@ const content = {
           second: "Solution/Article design",
           third: "Energy design and engineering",
           fourth: "Chemical process engineering",
-          fifth: "Software solutions",
+          fifth: "Software solutions and website design (like this one)",
         },
         actionLabel: "Learn more about architecture",
       },
@@ -298,7 +298,8 @@ const content = {
           second: "Σχεδιασμός αντικειμένων",
           third: "Ενεργειακή μηχανική",
           fourth: "Μηχανική χημικών διεργασιών",
-          fifth: "Λύσεις λογισμικού",
+          fifth:
+            "Λύσεις λογισμικού και σχεδιασμός ιστοσελίδων (όπως η παρούσα)",
         },
         actionLabel: "ΜΑΘΕΤΕ ΠΕΡΙΣΣΟΤΕΡΑ ΓΙΑ ΤΗΝ ΑΡΧΙΤΕΚΤΟΝΙΚΗ",
       },

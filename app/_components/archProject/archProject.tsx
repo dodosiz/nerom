@@ -17,7 +17,7 @@ interface ArchProjectProps {
 
 export function ArchProject(props: ArchProjectProps) {
   const [windowWidth, setWindowWidth] = useState<number>(0);
-  const maxWidth = windowWidth * 0.8;
+  const maxWidth = windowWidth < 768 ? windowWidth * 0.95 : windowWidth * 0.8;
 
   useEffect(() => {
     const handleResize = () => {
