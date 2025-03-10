@@ -21,11 +21,6 @@ export default function Architecture() {
         )}
         images={[
           {
-            src: "/architecture/filiates/bath.png",
-            alt: useLocalized("architecture.projects.filiates.alt1", lang),
-            apectRatio: 3000 / 4951,
-          },
-          {
             src: "/architecture/filiates/kitchen2.png",
             alt: useLocalized("architecture.projects.filiates.alt2", lang),
             apectRatio: 3000 / 7876,
@@ -34,6 +29,11 @@ export default function Architecture() {
             src: "/architecture/filiates/kitchen.png",
             alt: useLocalized("architecture.projects.filiates.alt3", lang),
             apectRatio: 3000 / 7876,
+          },
+          {
+            src: "/architecture/filiates/bath.png",
+            alt: useLocalized("architecture.projects.filiates.alt1", lang),
+            apectRatio: 3000 / 4951,
           },
         ]}
       />
