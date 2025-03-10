@@ -5,14 +5,15 @@ const content = {
       heading: "Privacy Policy",
       subheading: "We value your privacy",
       link: "Privacy Policy",
+      consent: "I have read and agree to the ",
       title: "Privacy Policy for NEROM Engineering Business & Services",
-      lastUpdated: "Last Updated: 26.02.2025",
+      lastUpdated: "Last Updated: 11.03.2025",
       intro:
         "At NEROM Engineering Business & Services, we respect your privacy and are committed to protecting the personal data you share with us. This privacy policy explains how we collect, use, and protect your personal data, particularly through the use of Google Analytics.",
       information: {
         title: "1. Information We Collect",
         content:
-          "Currently, we do not collect personal information directly from visitors to our website, aside from data collected through Google Analytics.",
+          "Currently, we do not collect personal information directly from visitors to our website, aside from data collected through Google Analytics and the email and message collected from the contact form.",
       },
       googleAnalytics: {
         title: "2. Use of Google Analytics",
@@ -29,12 +30,12 @@ const content = {
       dataRetention: {
         title: "4. Data Retention",
         content:
-          "We retain personal data collected through Google Analytics for a period of 26 months. After this period, the data is automatically deleted.",
+          "We retain personal data collected through Google Analytics and the contact form for a period of 26 months. After this period, the data is automatically deleted.",
       },
       rights: {
         title: "5. Your Rights",
         content:
-          "You have the right to access, update, or delete your personal data collected through Google Analytics. If you wish to exercise these rights, please contact us at ",
+          "You have the right to access, update, or delete your personal data collected through Google Analytics and the contact form. If you wish to exercise these rights, please contact us at ",
       },
       internationalDataTransfers: {
         title: "6. International Data Transfers",
@@ -222,14 +223,15 @@ const content = {
       heading: "Πολιτική Απορρήτου",
       subheading: "Σεβόμαστε την ιδιωτικότητά σας",
       link: "Πολιτική Απορρήτου",
+      consent: "Έχω διαβάσει και συμφωνώ με την ",
       title: "Πολιτική Απορρήτου για την NEROM Engineering Business & Services",
-      lastUpdated: "Τελευταία ενημέρωση: 26.02.2025",
+      lastUpdated: "Τελευταία ενημέρωση: 11.03.2025",
       intro:
         "Στην NEROM Engineering Business & Services, σεβόμαστε την ιδιωτικότητά σας και δεσμευόμαστε να προστατεύουμε τα προσωπικά δεδομένα που μοιράζεστε μαζί μας. Αυτή η πολιτική απορρήτου εξηγεί πώς συλλέγουμε, χρησιμοποιούμε και προστατεύουμε τα προσωπικά σας δεδομένα, ιδιαίτερα μέσω της χρήσης του Google Analytics.",
       information: {
         title: "1. Πληροφορίες που Συλλέγουμε",
         content:
-          "Προς το παρόν, δεν συλλέγουμε προσωπικές πληροφορίες απευθείας από τους επισκέπτες του ιστότοπού μας, εκτός από τα δεδομένα που συλλέγονται μέσω του Google Analytics.",
+          "Προς το παρόν, δεν συλλέγουμε προσωπικές πληροφορίες απευθείας από τους επισκέπτες του ιστότοπού μας, εκτός από τα δεδομένα που συλλέγονται μέσω του Google Analytics και το email και το μήνυμα που συλλέγονται από τη φόρμα επικοινωνίας.",
       },
       googleAnalytics: {
         title: "2. Χρήση του Google Analytics",
@@ -246,12 +248,12 @@ const content = {
       dataRetention: {
         title: "4. Διατήρηση Δεδομένων",
         content:
-          "Διατηρούμε τα προσωπικά δεδομένα που συλλέγονται μέσω του Google Analytics για περίοδο 26 μηνών. Μετά από αυτή την περίοδο, τα δεδομένα διαγράφονται αυτόματα.",
+          "Διατηρούμε τα προσωπικά δεδομένα που συλλέγονται μέσω του Google Analytics και της φόρμας επικοινωνίας για περίοδο 26 μηνών. Μετά από αυτή την περίοδο, τα δεδομένα διαγράφονται αυτόματα.",
       },
       rights: {
         title: "5. Τα Δικαιώματά σας",
         content:
-          "Έχετε το δικαίωμα πρόσβασης, ενημέρωσης ή διαγραφής των προσωπικών σας δεδομένων που συλλέγονται μέσω του Google Analytics. Εάν επιθυμείτε να ασκήσετε αυτά τα δικαιώματα, παρακαλούμε επικοινωνήστε μαζί μας στο ",
+          "Έχετε το δικαίωμα πρόσβασης, ενημέρωσης ή διαγραφής των προσωπικών σας δεδομένων που συλλέγονται μέσω του Google Analytics και της φόρμας επικοινωνίας. Εάν επιθυμείτε να ασκήσετε αυτά τα δικαιώματα, παρακαλούμε επικοινωνήστε μαζί μας στο ",
       },
       internationalDataTransfers: {
         title: "6. Διεθνείς Μεταφορές Δεδομένων",

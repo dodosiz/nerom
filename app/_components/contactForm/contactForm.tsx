@@ -1,7 +1,9 @@
 "use client";
 import {
   Button,
+  Checkbox,
   FormControl,
+  FormControlLabel,
   FormHelperText,
   InputLabel,
   MenuItem,
@@ -18,6 +20,7 @@ import { useLang, useLocalized } from "../../localization";
 import { useState } from "react";
 import { sendMessage } from "../../lib/contact";
 import { isValidEmail, isValidMessage } from "../../lib/utils";
+import Link from "next/link";
 
 const ITEM_HEIGHT = 48;
 const ITEM_PADDING_TOP = 8;
@@ -48,6 +51,7 @@ export function ContactForm() {
   const [validMail, setValidMail] = useState(true);
   const [validMessage, setValidMessage] = useState(true);
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [agreed, setAgreed] = useState(false);
 
   const subjects = [
     useLocalized("contact.subject.options.general", lang),
@@ -63,6 +67,8 @@ export function ContactForm() {
   const emailLabel = useLocalized("contact.email.label", lang);
   const messageLabel = useLocalized("contact.message.label", lang);
   const sendButtonLabel = useLocalized("contact.send", lang);
+  const privacyConsent = useLocalized("privacy.consent", lang);
+  const privacyLink = useLocalized("privacy.link", lang);
 
   const handleSubjectChange = (event: SelectChangeEvent<typeof subjects>) => {
     const {
@@ -91,7 +97,7 @@ export function ContactForm() {
   const isSubmitDisabled = () => {
     const invalid = !validMail || !validMessage;
     const empty = !email || !message || !subject.length;
-    return invalid || empty;
+    return invalid || empty || !agreed;
   };
 
   const handleFormSubmit = (event: React.FormEvent<HTMLFormElement>) => {
@@ -181,6 +187,19 @@ export function ContactForm() {
               error={!validMessage}
               helperText={!validMessage ? invalidMessageHint : ""}
               rows={4}
+            />
+          </FormControl>
+          <FormControl className={styles.formControl}>
+            <FormControlLabel
+              control={<Checkbox onChange={() => setAgreed(!agreed)} />}
+              label={
+                <span>
+                  {privacyConsent}
+                  <Link href="/privacy" style={{ textDecoration: "underline" }}>
+                    {privacyLink}
+                  </Link>
+                </span>
+              }
             />
           </FormControl>
           <Button
