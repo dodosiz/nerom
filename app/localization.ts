@@ -159,6 +159,38 @@ const content = {
         "Get in touch with us to learn more about our services or discuss your project and business needs. You can call us, send us an email, or use our contact form (comming soon).",
       contactDetails: "Contact details",
       address: "188 Ipokratous Str., Athens 11471",
+      contactForm: "Contact form",
+      subject: {
+        label: "Subject",
+        options: {
+          general: "General inquiry",
+          engineering: "Engineering services",
+          business: "Business consulting",
+          other: "Other services",
+        },
+        hint: "Please choose a value",
+      },
+      email: {
+        label: "Email",
+        hint: "Please enter a valid email address",
+      },
+      message: {
+        label: "Message",
+        hint: "Only letters, numbers, spaces, and punctuation are allowed",
+      },
+      send: "Send",
+      success: {
+        title: "Message sent",
+        content:
+          "Thank you for contacting us. We will get back to you as soon as possible.",
+        actionButtonLabel: "Back to contact",
+      },
+      error: {
+        title: "Error",
+        content:
+          "An error occurred while sending your message. Please try again later.",
+        actionButtonLabel: "Back to contact",
+      },
     },
     architecture: {
       title: "Architecture",
@@ -347,6 +379,38 @@ const content = {
         "Επικοινωνήστε μαζί μας για να μάθετε περισσότερα σχετικά με τις υπηρεσίες μας ή για να συζητήσουμε τις ανάγκες της επιχείρησής και του project σας. Μπορείτε να μας καλέσετε, να μας στείλετε email ή να χρησιμοποιήσετε τη φόρμα επικοινωνίας μας (προσεχώς).",
       contactDetails: "Στοιχεία επικοινωνίας",
       address: "Ιπποκράτους 188 , Αθήνα ΤΚ 11471",
+      contactForm: "Φόρμα επικοινωνίας",
+      subject: {
+        label: "Θέμα",
+        options: {
+          general: "Γενική ερώτηση",
+          engineering: "Υπηρεσίες μηχανικού",
+          business: "Συμβουλευτική επιχειρήσεων",
+          other: "Άλλες υπηρεσίες",
+        },
+        hint: "Παρακαλώ επιλέξτε μια τιμή",
+      },
+      email: {
+        label: "Email",
+        hint: "Παρακαλώ εισάγετε μια έγκυρη διεύθυνση email",
+      },
+      message: {
+        label: "Μήνυμα",
+        hint: "Επιτρέπονται μόνο γράμματα, αριθμοί, κενά και σημεία στίξης",
+      },
+      send: "Αποστολη",
+      success: {
+        title: "Μήνυμα εστάλη",
+        content:
+          "Σας ευχαριστούμε που επικοινωνήσατε μαζί μας. Θα σας απαντήσουμε το συντομότερο δυνατό.",
+        actionButtonLabel: "Επιστροφη στην επικοινωνια",
+      },
+      error: {
+        title: "Σφάλμα",
+        content:
+          "Παρουσιάστηκε σφάλμα κατά την αποστολή του μηνύματός σας. Παρακαλώ δοκιμάστε ξανά αργότερα.",
+        actionButtonLabel: "Επιστροφη στην επικοινωνια",
+      },
     },
     architecture: {
       title: "Αρχιτεκτονική",

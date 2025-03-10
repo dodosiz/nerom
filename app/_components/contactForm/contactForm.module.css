@@ -1,0 +1,20 @@
+.formControl {
+  width: 50%;
+}
+
+.submitButton {
+  width: 100px;
+}
+
+.formContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+@media screen and (max-width: 768px) {
+  .formControl {
+    width: 100%;
+  }
+}

@@ -6,9 +6,11 @@ import { useLang, useLocalized } from "../localization";
 import EmailIcon from "@mui/icons-material/Email";
 import LocalPhoneIcon from "@mui/icons-material/LocalPhone";
 import BusinessIcon from "@mui/icons-material/Business";
+import { ContactForm } from "../_components/contactForm/contactForm";
 
 export default function Contact() {
   const lang = useLang();
+
   return (
     <main>
       <Hero
@@ -21,6 +23,8 @@ export default function Contact() {
         content={[useLocalized("contact.content", lang)]}
       />
       <Container>
+        <h2>{useLocalized("contact.contactForm", lang)}</h2>
+        <ContactForm />
         <h2>{useLocalized("contact.contactDetails", lang)}</h2>
         <p style={{ display: "flex", alignItems: "center", gap: "0.5rem" }}>
           <EmailIcon fontSize="small" />
