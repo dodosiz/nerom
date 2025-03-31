@@ -1,7 +1,8 @@
 "use client";
 import { Button, Grid2 as Grid } from "@mui/material";
 import { Container } from "../container/container";
-import { useLang, useLocalized } from "../../localization";
+import { getLocalization, Lang } from "../../localization";
+import { useRouter } from "next/navigation";
 
 interface GridItem {
   id: string;
@@ -12,14 +13,15 @@ interface GridItem {
 interface GridWithContentProps {
   title: string;
   items: GridItem[];
+  lang: Lang;
   size: { xs: number; md: number };
 }
 
 export function GridWithContent(props: GridWithContentProps) {
-  const lang = useLang();
-  const learnMoreLabel = useLocalized("expertise.learnMore", lang);
+  const learnMoreLabel = getLocalization("expertise.learnMore", props.lang);
+  const router = useRouter();
   const goToLink = (item: GridItem) => {
-    window.location.href = `/services#${item.id}`;
+    router.push(`${props.lang}/services#${item.id}`);
   };
   return (
     <Container>

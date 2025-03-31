@@ -1,31 +1,34 @@
-"use client";
-import { Container } from "../_components/container/container";
-import { ContentWithTitle } from "../_components/content/contentWithTitle";
-import { Hero } from "../_components/hero/hero";
-import { useLang, useLocalized } from "../localization";
+import { Container } from "../../_components/container/container";
+import { ContentWithTitle } from "../../_components/content/contentWithTitle";
+import { Hero } from "../../_components/hero/hero";
+import { getLocalization, Lang } from "../../localization";
 import EmailIcon from "@mui/icons-material/Email";
 import LocalPhoneIcon from "@mui/icons-material/LocalPhone";
 import BusinessIcon from "@mui/icons-material/Business";
-import { ContactForm } from "../_components/contactForm/contactForm";
+import { ContactForm } from "../../_components/contactForm/contactForm";
 
-export default function Contact() {
-  const lang = useLang();
-
+export default async function Contact({
+  params,
+}: {
+  params: Promise<{ lang: Lang }>;
+}) {
+  const { lang } = await params;
   return (
     <main>
       <Hero
-        title={useLocalized("contact.hero.title", lang)}
-        description={useLocalized("contact.hero.description", lang)}
+        title={getLocalization("contact.hero.title", lang)}
+        description={getLocalization("contact.hero.description", lang)}
         image="/images/hero2.jpg"
       />
       <ContentWithTitle
-        title={useLocalized("contact.title", lang)}
-        content={[useLocalized("contact.content", lang)]}
+        lang={lang}
+        title={getLocalization("contact.title", lang)}
+        content={[getLocalization("contact.content", lang)]}
       />
       <Container>
-        <h2>{useLocalized("contact.contactForm", lang)}</h2>
-        <ContactForm />
-        <h2>{useLocalized("contact.contactDetails", lang)}</h2>
+        <h2>{getLocalization("contact.contactForm", lang)}</h2>
+        <ContactForm lang={lang} />
+        <h2>{getLocalization("contact.contactDetails", lang)}</h2>
         <p style={{ display: "flex", alignItems: "center", gap: "0.5rem" }}>
           <EmailIcon fontSize="small" />
           <a href="mailto:neromebs@gmail.com">neromebs@gmail.com</a>
@@ -44,7 +47,7 @@ export default function Contact() {
         </p>
         <p style={{ display: "flex", alignItems: "center", gap: "0.5rem" }}>
           <BusinessIcon fontSize="small" />
-          <span>{useLocalized("contact.address", lang)}</span>
+          <span>{getLocalization("contact.address", lang)}</span>
         </p>
       </Container>
     </main>

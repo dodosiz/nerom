@@ -1,17 +1,16 @@
 "use client";
 import { FormControl, InputLabel, MenuItem, Select } from "@mui/material";
 import React from "react";
-import { useLang, useLocalized } from "../../localization";
+import { getLocalization, Lang } from "../../localization";
+import { redirect, usePathname } from "next/navigation";
 
-export function LangSelect() {
-  const lang = useLang();
+export function LangSelect({ lang }: { lang: Lang }) {
+  const pathname = usePathname();
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const handleChange = (event: any) => {
-    const newLang = event.target.value as "en" | "el";
-    if (typeof window !== "undefined") {
-      window.localStorage.setItem("lang", newLang);
-      window.location.reload();
-    }
+    const locale = event.target.value as Lang;
+    const updatedPathname = pathname.replace(/^\/(en|el)/, `/${locale}`);
+    redirect(updatedPathname);
   };
   return (
     <FormControl
@@ -24,7 +23,7 @@ export function LangSelect() {
       }}
     >
       <InputLabel id="lang-select" style={{ color: "inherit" }}>
-        {useLocalized("navigation.lang", lang)}
+        {getLocalization("navigation.lang", lang)}
       </InputLabel>
       <Select
         style={{ color: "inherit" }}

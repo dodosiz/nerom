@@ -6,12 +6,13 @@ import { put } from "@vercel/blob";
 export async function sendMessage(
   subject: string,
   email: string,
-  message: string
+  message: string,
+  lang: string
 ) {
   const invalid =
     !isValidEmail(email) || !isValidMessage(message) || !subject.length;
   if (invalid) {
-    redirect("/contact/error");
+    redirect(`/${lang}/contact/error`);
   }
   try {
     await put(
@@ -20,7 +21,7 @@ export async function sendMessage(
       { access: "public" }
     );
   } catch {
-    redirect("/contact/error");
+    redirect(`/${lang}/contact/error`);
   }
-  redirect("/contact/success");
+  redirect(`/${lang}/contact/success`);
 }

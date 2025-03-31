@@ -1,4 +1,3 @@
-"use client";
 const content = {
   en: {
     privacy: {
@@ -442,7 +441,9 @@ const content = {
   },
 };
 
-export function useLocalized(key: string, lang: "en" | "el") {
+export type Lang = "en" | "el";
+
+export function getLocalization(key: string, lang: Lang) {
   const keys = key.split(".");
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   let result = content[lang] as any;
@@ -455,20 +456,4 @@ export function useLocalized(key: string, lang: "en" | "el") {
   }
 
   return result;
-}
-
-export function useLang(): "en" | "el" {
-  const userLanguage = navigator.language || "en";
-  const storedLang =
-    typeof window !== "undefined" ? window.localStorage.getItem("lang") : "en";
-
-  if (storedLang) {
-    return storedLang as "en" | "el";
-  }
-
-  if (userLanguage.includes("el")) {
-    return "el";
-  }
-
-  return "en";
 }

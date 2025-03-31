@@ -1,5 +1,8 @@
+"use client";
 import { Button } from "@mui/material";
 import { Container } from "../container/container";
+import { Lang } from "../../localization";
+import { useRouter } from "next/navigation";
 
 interface ContentWithListProps {
   id: string;
@@ -11,11 +14,13 @@ interface ContentWithListProps {
   secondList?: string[];
   actionButtonLabel?: string;
   actionButtonLink?: string;
+  lang: Lang;
 }
 
 export function ContentWithList(props: ContentWithListProps) {
+  const router = useRouter();
   const goToLink = (link: string) => {
-    window.location.href = `/${link}`;
+    router.push(`/${props.lang}/${link}`);
   };
   const link = props.actionButtonLink;
   return (

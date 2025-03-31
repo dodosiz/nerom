@@ -16,7 +16,7 @@ import {
   useTheme,
 } from "@mui/material";
 import styles from "./contactForm.module.css";
-import { useLang, useLocalized } from "../../localization";
+import { getLocalization, Lang } from "../../localization";
 import { useState } from "react";
 import { sendMessage } from "../../lib/contact";
 import { isValidEmail, isValidMessage } from "../../lib/utils";
@@ -41,8 +41,7 @@ function getStyles(name: string, personName: string[], theme: Theme) {
   };
 }
 
-export function ContactForm() {
-  const lang = useLang();
+export function ContactForm({ lang }: { lang: Lang }) {
   const theme = useTheme();
   const [subject, setSubject] = useState<string[]>([]);
   const [email, setEmail] = useState("");
@@ -54,21 +53,21 @@ export function ContactForm() {
   const [agreed, setAgreed] = useState(false);
 
   const subjects = [
-    useLocalized("contact.subject.options.general", lang),
-    useLocalized("contact.subject.options.engineering", lang),
-    useLocalized("contact.subject.options.business", lang),
-    useLocalized("contact.subject.options.other", lang),
+    getLocalization("contact.subject.options.general", lang),
+    getLocalization("contact.subject.options.engineering", lang),
+    getLocalization("contact.subject.options.business", lang),
+    getLocalization("contact.subject.options.other", lang),
   ];
 
-  const invalidSubjectHint = useLocalized("contact.subject.hint", lang);
-  const invalidEmailHint = useLocalized("contact.email.hint", lang);
-  const invalidMessageHint = useLocalized("contact.message.hint", lang);
-  const subjectLabel = useLocalized("contact.subject.label", lang);
-  const emailLabel = useLocalized("contact.email.label", lang);
-  const messageLabel = useLocalized("contact.message.label", lang);
-  const sendButtonLabel = useLocalized("contact.send", lang);
-  const privacyConsent = useLocalized("privacy.consent", lang);
-  const privacyLink = useLocalized("privacy.link", lang);
+  const invalidSubjectHint = getLocalization("contact.subject.hint", lang);
+  const invalidEmailHint = getLocalization("contact.email.hint", lang);
+  const invalidMessageHint = getLocalization("contact.message.hint", lang);
+  const subjectLabel = getLocalization("contact.subject.label", lang);
+  const emailLabel = getLocalization("contact.email.label", lang);
+  const messageLabel = getLocalization("contact.message.label", lang);
+  const sendButtonLabel = getLocalization("contact.send", lang);
+  const privacyConsent = getLocalization("privacy.consent", lang);
+  const privacyLink = getLocalization("privacy.link", lang);
 
   const handleSubjectChange = (event: SelectChangeEvent<typeof subjects>) => {
     const {
@@ -106,7 +105,7 @@ export function ContactForm() {
     if (isSubmitDisabled()) {
       return;
     }
-    sendMessage(subject.join(", "), email, message);
+    sendMessage(subject.join(", "), email, message, lang);
   };
 
   return (
@@ -195,7 +194,10 @@ export function ContactForm() {
               label={
                 <span>
                   {privacyConsent}
-                  <Link href="/privacy" style={{ textDecoration: "underline" }}>
+                  <Link
+                    href={`/${lang}/privacy`}
+                    style={{ textDecoration: "underline" }}
+                  >
                     {privacyLink}
                   </Link>
                 </span>

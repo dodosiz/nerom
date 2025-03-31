@@ -3,23 +3,26 @@ import Link from "next/link";
 import styles from "./navigationMenu.module.css";
 import { usePathname } from "next/navigation";
 import React from "react";
-import { useLang, useLocalized } from "../../localization";
+import { getLocalization, Lang } from "../../localization";
 
-export function NavigationMenu() {
-  const lang = useLang();
+export function NavigationMenu({ lang }: { lang: Lang }) {
   return (
     <NavigationMenuInternal
+      lang={lang}
       items={[
-        { name: useLocalized("navigation.home", lang), url: "/" },
+        { name: getLocalization("navigation.home", lang), url: `/${lang}` },
         {
-          name: useLocalized("navigation.services", lang),
-          url: "/services",
+          name: getLocalization("navigation.services", lang),
+          url: `/${lang}/services`,
         },
         {
-          name: useLocalized("architecture.title", lang),
-          url: "/architecture",
+          name: getLocalization("architecture.title", lang),
+          url: `/${lang}/architecture`,
         },
-        { name: useLocalized("navigation.contact", lang), url: "/contact" },
+        {
+          name: getLocalization("navigation.contact", lang),
+          url: `/${lang}/contact`,
+        },
       ]}
     />
   );
@@ -32,9 +35,10 @@ interface MenuEntry {
 
 interface NavigationMenuProps {
   items: MenuEntry[];
+  lang: Lang;
 }
 
-function NavigationMenuInternal({ items }: NavigationMenuProps) {
+function NavigationMenuInternal({ items, lang }: NavigationMenuProps) {
   const pathname = usePathname();
   const [open, setOpen] = React.useState(false);
   React.useEffect(() => {
@@ -55,7 +59,7 @@ function NavigationMenuInternal({ items }: NavigationMenuProps) {
   return (
     <nav className={styles.bar}>
       <div className={styles.logo}>
-        <Link href="/" onClick={() => setOpen(false)}>
+        <Link href={`/${lang}/`} onClick={() => setOpen(false)}>
           NEROM
         </Link>
       </div>
