@@ -195,6 +195,8 @@ const content = {
     architecture: {
       title: "Architecture",
       description: "Our architectural services are tailored to meet your needs",
+      back: "Back to architecture",
+      learnMore: "Learn more",
       projects: {
         filiates: {
           title: "Cozy Small House in Filiates",
@@ -417,6 +419,8 @@ const content = {
       title: "Αρχιτεκτονική",
       description:
         "Οι αρχιτεκτονικές μας υπηρεσίες προσαρμόζονται στις ανάγκες σας",
+      back: "Πίσω στην αρχιτεκτονική",
+      learnMore: "Μαθετε περισσοτερα",
       projects: {
         filiates: {
           title: "Άνετο Μικρό Σπίτι στους Φιλιάτες",

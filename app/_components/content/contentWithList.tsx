@@ -1,8 +1,7 @@
-"use client";
 import { Button } from "@mui/material";
 import { Container } from "../container/container";
 import { Lang } from "../../localization";
-import { useRouter } from "next/navigation";
+import Link from "next/link";
 
 interface ContentWithListProps {
   id: string;
@@ -18,10 +17,6 @@ interface ContentWithListProps {
 }
 
 export function ContentWithList(props: ContentWithListProps) {
-  const router = useRouter();
-  const goToLink = (link: string) => {
-    router.push(`/${props.lang}/${link}`);
-  };
   const link = props.actionButtonLink;
   return (
     <Container>
@@ -50,14 +45,15 @@ export function ContentWithList(props: ContentWithListProps) {
         </>
       )}
       {link && (
-        <Button
-          style={{ marginTop: "10px" }}
-          color="inherit"
-          variant="outlined"
-          onClick={() => goToLink(link)}
-        >
-          {props.actionButtonLabel}
-        </Button>
+        <Link href={`/${props.lang}/${link}`} passHref>
+          <Button
+            style={{ marginTop: "10px" }}
+            color="inherit"
+            variant="outlined"
+          >
+            {props.actionButtonLabel}
+          </Button>
+        </Link>
       )}
     </Container>
   );

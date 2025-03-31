@@ -2,17 +2,16 @@
 import Image from "next/image";
 import styles from "./archProject.module.css";
 import { useEffect, useState } from "react";
-
-interface ImageElement {
-  src: string;
-  alt: string;
-  apectRatio: number;
-}
+import { ImageData } from "../../_data/projects";
+import { getLocalization, Lang } from "../../localization";
+import Link from "next/link";
+import { Button } from "@mui/material";
 
 interface ArchProjectProps {
   title: string;
   description?: string;
-  images: ImageElement[];
+  images: ImageData[];
+  lang: Lang;
 }
 
 export function ArchProject(props: ArchProjectProps) {
@@ -49,6 +48,15 @@ export function ArchProject(props: ArchProjectProps) {
             <p>{image.alt}</p>
           </div>
         ))}
+        <Link href={`/${props.lang}/architecture`} passHref>
+          <Button
+            style={{ marginTop: "10px" }}
+            color="inherit"
+            variant="outlined"
+          >
+            {getLocalization("architecture.back", props.lang)}
+          </Button>
+        </Link>
       </div>
     </>
   );

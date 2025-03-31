@@ -1,8 +1,7 @@
-"use client";
 import { Button } from "@mui/material";
 import { Container } from "../container/container";
 import { Lang } from "../../localization";
-import { useRouter } from "next/navigation";
+import Link from "next/link";
 
 interface ContentWithTitleProps {
   title: string;
@@ -13,10 +12,6 @@ interface ContentWithTitleProps {
 }
 
 export function ContentWithTitle(props: ContentWithTitleProps) {
-  const router = useRouter();
-  const goToLink = (link: string) => {
-    router.push(`/${props.lang}/${link}`);
-  };
   const link = props.actionButtonLink;
   return (
     <Container>
@@ -25,14 +20,15 @@ export function ContentWithTitle(props: ContentWithTitleProps) {
         <p key={index}>{content}</p>
       ))}
       {link && (
-        <Button
-          style={{ marginTop: "10px" }}
-          color="inherit"
-          variant="outlined"
-          onClick={() => goToLink(link)}
-        >
-          {props.actionButtonLabel}
-        </Button>
+        <Link href={`/${props.lang}/${link}`} passHref>
+          <Button
+            style={{ marginTop: "10px" }}
+            color="inherit"
+            variant="outlined"
+          >
+            {props.actionButtonLabel}
+          </Button>
+        </Link>
       )}
     </Container>
   );
