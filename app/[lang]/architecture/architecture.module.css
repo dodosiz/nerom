@@ -2,6 +2,8 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 16px;
+  margin-top: 16px;
+  margin-bottom: 16px;
 }
 
 .box {
@@ -10,12 +12,10 @@
   transform: scale(0.9);
 }
 
-.card {
-  min-width: 275px;
-  height: 400px;
+.container {
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
+  align-items: center;
 }
 
 @media (max-width: 768px) {
@@ -26,10 +26,5 @@
   .box {
     margin: 0 auto;
     transform: scale(1); /* Reset scaling for better visibility */
-  }
-
-  .card {
-    height: auto; /* Allow height to adjust dynamically */
-    min-width: 100%; /* Ensure it fits within the screen */
   }
 }
