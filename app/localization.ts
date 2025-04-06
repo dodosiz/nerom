@@ -215,6 +215,20 @@ const content = {
           alt4: "Bedroom and Walk-in Closet",
           alt5: "Walk-in Closet",
         },
+        expo: {
+          title: "Innovative Exhibition Space",
+          description:
+            "An innovative exhibition space designed to showcase different types of products. The space features a modern aesthetic with flexible layouts, allowing for a variety of exhibitions and events.",
+          alt1: "Bike exhibition space",
+          alt2: "Furniture exhibition space (left side)",
+          alt3: "Furniture exhibition space (right side)",
+        },
+        kindergarten: {
+          title: "Kindergarten concept",
+          description:
+            "A kindergarten designed to provide a safe and stimulating environment. The space features modern amenities to support early childhood education.",
+          alt1: "The main area of the kindergarten",
+        },
       },
     },
   },
@@ -437,6 +451,20 @@ const content = {
           alt3: "Κύρια Κρεβατοκάμαρα",
           alt4: "Κρεβατοκάμαρα και Δωμάτιο-Ντουλάπα",
           alt5: "Δωμάτιο-Ντουλάπα",
+        },
+        expo: {
+          title: "Καινοτόμος Εκθεσιακός Χώρος",
+          description:
+            "Ένας καινοτόμος εκθεσιακός χώρος σχεδιασμένος για να παρουσιάζει διάφορους τύπους προϊόντων. Ο χώρος διαθέτει μοντέρνα αισθητική με ευέλικτες διατάξεις, επιτρέποντας μια ποικιλία εκθέσεων και εκδηλώσεων.",
+          alt1: "Χώρος έκθεσης ποδηλάτων",
+          alt2: "Χώρος έκθεσης επίπλων (αριστερή πλευρά)",
+          alt3: "Χώρος έκθεσης επίπλων (δεξιά πλευρά)",
+        },
+        kindergarten: {
+          title: "Νηπιαγωγείο",
+          description:
+            "Ένα νηπιαγωγείο σχεδιασμένο για να παρέχει ένα ασφαλές περιβάλλον. Ο χώρος διαθέτει σύγχρονες ανέσεις για την υποστήριξη της πρώιμης παιδικής εκπαίδευσης.",
+          alt1: "Ο κύριος χώρος του νηπιαγωγείου",
         },
       },
     },

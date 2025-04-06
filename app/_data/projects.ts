@@ -66,4 +66,38 @@ export const PROJECTS: Project[] = [
       },
     ],
   },
+  {
+    id: "expo",
+    title: "architecture.projects.expo.title",
+    description: "architecture.projects.expo.description",
+    images: [
+      {
+        src: "/architecture/expo/expo1.jpg",
+        alt: "architecture.projects.expo.alt1",
+        apectRatio: 2759 / 8000,
+      },
+      {
+        src: "/architecture/expo/expo2.jpg",
+        alt: "architecture.projects.expo.alt2",
+        apectRatio: 3302 / 8000,
+      },
+      {
+        src: "/architecture/expo/expo3.jpg",
+        alt: "architecture.projects.expo.alt3",
+        apectRatio: 3286 / 8000,
+      },
+    ],
+  },
+  {
+    id: "kindergarten",
+    title: "architecture.projects.kindergarten.title",
+    description: "architecture.projects.kindergarten.description",
+    images: [
+      {
+        src: "/architecture/kindergarten/kindergarten.jpg",
+        alt: "architecture.projects.kindergarten.alt1",
+        apectRatio: 2069 / 6000,
+      },
+    ],
+  },
 ];
