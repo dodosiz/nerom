@@ -311,6 +311,7 @@ const content = {
     },
     expertise: {
       title: "Η εμπειρία μας",
+      learnMore: "Μάθετε περισσότερα",
       engineering: {
         title: "Μηχανικοί",
         description:
