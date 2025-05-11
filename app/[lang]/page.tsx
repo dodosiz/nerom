@@ -2,7 +2,7 @@ import { Divider } from "@mui/material";
 import { Hero } from "../_components/hero/hero";
 import { GridWithContent } from "../_components/content/gridWithContent";
 import { ContentWithTitle } from "../_components/content/contentWithTitle";
-import { getLocalization, Lang } from "../localization";
+import { extractLang, getLocalization, Lang } from "../localization";
 import { BUSINESS, ENGINEERING } from "../constants";
 
 export default async function Home({
@@ -10,7 +10,7 @@ export default async function Home({
 }: {
   params: Promise<{ lang: Lang }>;
 }) {
-  const { lang } = await params;
+  const lang = await extractLang(params);
   return (
     <main>
       <Hero

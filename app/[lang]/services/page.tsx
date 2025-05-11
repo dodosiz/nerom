@@ -1,6 +1,6 @@
 import { Divider } from "@mui/material";
 import { Hero } from "../../_components/hero/hero";
-import { getLocalization, Lang } from "../../localization";
+import { extractLang, getLocalization, Lang } from "../../localization";
 import { ContentWithList } from "../../_components/content/contentWithList";
 import { BUSINESS, ENGINEERING, OTHER } from "../../constants";
 
@@ -9,7 +9,7 @@ export default async function Services({
 }: {
   params: Promise<{ lang: Lang }>;
 }) {
-  const { lang } = await params;
+  const lang = await extractLang(params);
   return (
     <main>
       <Hero

@@ -1,7 +1,7 @@
 import { Container } from "../../_components/container/container";
 import { ContentWithTitle } from "../../_components/content/contentWithTitle";
 import { Hero } from "../../_components/hero/hero";
-import { getLocalization, Lang } from "../../localization";
+import { extractLang, getLocalization, Lang } from "../../localization";
 import EmailIcon from "@mui/icons-material/Email";
 import LocalPhoneIcon from "@mui/icons-material/LocalPhone";
 import BusinessIcon from "@mui/icons-material/Business";
@@ -12,7 +12,7 @@ export default async function Contact({
 }: {
   params: Promise<{ lang: Lang }>;
 }) {
-  const { lang } = await params;
+  const lang = await extractLang(params);
   return (
     <main>
       <Hero

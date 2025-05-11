@@ -1,3 +1,5 @@
+import { redirect } from "next/navigation";
+
 const content = {
   en: {
     privacy: {
@@ -487,4 +489,12 @@ export function getLocalization(key: string, lang: Lang) {
   }
 
   return result;
+}
+
+export async function extractLang(params: Promise<{ lang: Lang }>) {
+  const { lang } = await params;
+  if (lang !== "en" && lang !== "el") {
+    redirect("/en");
+  }
+  return lang;
 }

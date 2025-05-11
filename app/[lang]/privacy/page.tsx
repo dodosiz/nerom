@@ -1,13 +1,13 @@
 import { Container } from "../../_components/container/container";
 import { Hero } from "../../_components/hero/hero";
-import { getLocalization, Lang } from "../../localization";
+import { extractLang, getLocalization, Lang } from "../../localization";
 
 export default async function Privacy({
   params,
 }: {
   params: Promise<{ lang: Lang }>;
 }) {
-  const { lang } = await params;
+  const lang = await extractLang(params);
   return (
     <main>
       <Hero

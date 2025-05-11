@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { Hero } from "../../_components/hero/hero";
-import { getLocalization, Lang } from "../../localization";
+import { extractLang, getLocalization, Lang } from "../../localization";
 import {
   Box,
   Card,
@@ -16,7 +16,7 @@ export default async function Architecture({
 }: {
   params: Promise<{ lang: Lang }>;
 }) {
-  const { lang } = await params;
+  const lang = await extractLang(params);
   return (
     <main>
       <Hero
