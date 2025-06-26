@@ -3,7 +3,7 @@ import { Hero } from "../_components/hero/hero";
 import { GridWithContent } from "../_components/content/gridWithContent";
 import { ContentWithTitle } from "../_components/content/contentWithTitle";
 import { extractLang, getLocalization, Lang } from "../localization";
-import { BUSINESS, ENGINEERING } from "../constants";
+import { BUSINESS, ENGINEERING, SOFTWARE } from "../constants";
 
 export default async function Home({
   params,
@@ -49,6 +49,14 @@ export default async function Home({
               lang
             ),
           },
+          {
+            id: SOFTWARE,
+            title: getLocalization("expertise.software.title", lang),
+            description: getLocalization(
+              "expertise.software.description",
+              lang
+            ),
+          }
         ]}
       />
     </main>
