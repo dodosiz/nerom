@@ -30,7 +30,7 @@ export default async function Home({
       <Divider variant="middle" />
       <GridWithContent
         title={getLocalization("expertise.title", lang)}
-        size={{ xs: 12, md: 6 }}
+        size={{ xs: 12, md: 4 }}
         lang={lang}
         items={[
           {
