@@ -3,6 +3,42 @@ import { PROJECTS } from "../../../_data/projects";
 import { getLocalization, Lang } from "../../../localization";
 import { ArchProject } from "../../../_components/archProject/archProject";
 import { Hero } from "../../../_components/hero/hero";
+import { Metadata } from "next";
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ lang: Lang; projectId: string }>;
+}): Promise<Metadata> {
+  const { lang, projectId } = await params;
+  const project = PROJECTS.find((p) => p.id === projectId);
+
+  if (!project) {
+    return {
+      title: "Project Not Found - NEROM",
+    };
+  }
+
+  const title = `${getLocalization(project.title, lang)} - NEROM`;
+  const description = project.description
+    ? getLocalization(project.description, lang)
+    : getLocalization("architecture.description", lang);
+
+  return {
+    title,
+    description,
+    openGraph: {
+      title,
+      description,
+      images: [`/architecture/preview/${project.id}.png`],
+    },
+    twitter: {
+      title,
+      description,
+      images: [`/architecture/preview/${project.id}.png`],
+    },
+  };
+}
 
 export default async function ArchitectureProject({
   params,

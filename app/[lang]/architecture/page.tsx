@@ -10,6 +10,32 @@ import {
 } from "@mui/material";
 import { ImageData, PROJECTS } from "../../_data/projects";
 import styles from "./architecture.module.css";
+import { Metadata } from "next";
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ lang: Lang }>;
+}): Promise<Metadata> {
+  const lang = await extractLang(params);
+  const title = `${getLocalization("architecture.title", lang)} - NEROM`;
+  const description = getLocalization("architecture.description", lang);
+
+  return {
+    title,
+    description,
+    openGraph: {
+      title,
+      description,
+      images: ["/images/hero3.jpg"],
+    },
+    twitter: {
+      title,
+      description,
+      images: ["/images/hero3.jpg"],
+    },
+  };
+}
 
 export default async function Architecture({
   params,

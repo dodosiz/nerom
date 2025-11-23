@@ -1,6 +1,30 @@
 import { Container } from "../../_components/container/container";
 import { Hero } from "../../_components/hero/hero";
 import { extractLang, getLocalization, Lang } from "../../localization";
+import { Metadata } from "next";
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ lang: Lang }>;
+}): Promise<Metadata> {
+  const lang = await extractLang(params);
+  const title = `${getLocalization("privacy.heading", lang)} - NEROM`;
+  const description = getLocalization("privacy.intro", lang);
+
+  return {
+    title,
+    description,
+    openGraph: {
+      title,
+      description,
+    },
+    twitter: {
+      title,
+      description,
+    },
+  };
+}
 
 export default async function Privacy({
   params,

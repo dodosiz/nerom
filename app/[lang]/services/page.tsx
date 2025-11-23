@@ -3,6 +3,32 @@ import { Hero } from "../../_components/hero/hero";
 import { extractLang, getLocalization, Lang } from "../../localization";
 import { ContentWithList } from "../../_components/content/contentWithList";
 import { BUSINESS, ENGINEERING, OTHER } from "../../constants";
+import { Metadata } from "next";
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ lang: Lang }>;
+}): Promise<Metadata> {
+  const lang = await extractLang(params);
+  const title = `${getLocalization("services.hero.title", lang)} - NEROM`;
+  const description = getLocalization("services.engineering.description", lang);
+
+  return {
+    title,
+    description,
+    openGraph: {
+      title,
+      description,
+      images: ["/images/hero4.jpg"],
+    },
+    twitter: {
+      title,
+      description,
+      images: ["/images/hero4.jpg"],
+    },
+  };
+}
 
 export default async function Services({
   params,

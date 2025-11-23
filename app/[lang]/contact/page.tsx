@@ -6,6 +6,32 @@ import EmailIcon from "@mui/icons-material/Email";
 import LocalPhoneIcon from "@mui/icons-material/LocalPhone";
 import BusinessIcon from "@mui/icons-material/Business";
 import { ContactForm } from "../../_components/contactForm/contactForm";
+import { Metadata } from "next";
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ lang: Lang }>;
+}): Promise<Metadata> {
+  const lang = await extractLang(params);
+  const title = `${getLocalization("contact.hero.title", lang)} - NEROM`;
+  const description = getLocalization("contact.content", lang);
+
+  return {
+    title,
+    description,
+    openGraph: {
+      title,
+      description,
+      images: ["/images/hero2.jpg"],
+    },
+    twitter: {
+      title,
+      description,
+      images: ["/images/hero2.jpg"],
+    },
+  };
+}
 
 export default async function Contact({
   params,
