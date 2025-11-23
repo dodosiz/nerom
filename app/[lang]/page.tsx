@@ -2,7 +2,7 @@ import { Hero } from "../_components/hero/hero";
 import { GridWithContent } from "../_components/content/gridWithContent";
 import { ContentWithTitle } from "../_components/content/contentWithTitle";
 import { extractLang, getLocalization, Lang } from "../localization";
-import { BUSINESS, ENGINEERING } from "../constants";
+import { BUSINESS, ENGINEERING, SOFTWARE } from "../constants";
 import { Metadata } from "next";
 import {
   OrganizationStructuredData,
@@ -63,7 +63,7 @@ export default async function Home({
       <div style={{ background: "var(--gray-light)" }}>
         <GridWithContent
           title={getLocalization("expertise.title", lang)}
-          size={{ xs: 12, md: 6 }}
+          size={{ xs: 12, md: 4 }}
           lang={lang}
           items={[
             {
@@ -79,6 +79,14 @@ export default async function Home({
               title: getLocalization("expertise.business.title", lang),
               description: getLocalization(
                 "expertise.business.description",
+                lang
+              ),
+            },
+            {
+              id: SOFTWARE,
+              title: getLocalization("expertise.software.title", lang),
+              description: getLocalization(
+                "expertise.software.description",
                 lang
               ),
             },

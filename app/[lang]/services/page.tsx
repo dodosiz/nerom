@@ -2,7 +2,7 @@ import { Divider } from "@mui/material";
 import { Hero } from "../../_components/hero/hero";
 import { extractLang, getLocalization, Lang } from "../../localization";
 import { ContentWithList } from "../../_components/content/contentWithList";
-import { BUSINESS, ENGINEERING, OTHER } from "../../constants";
+import { BUSINESS, ENGINEERING, OTHER, SOFTWARE } from "../../constants";
 import { Metadata } from "next";
 
 export async function generateMetadata({
@@ -64,7 +64,6 @@ export default async function Services({
           getLocalization("services.engineering.secondList.second", lang),
           getLocalization("services.engineering.secondList.third", lang),
           getLocalization("services.engineering.secondList.fourth", lang),
-          getLocalization("services.engineering.secondList.fifth", lang),
         ]}
         actionButtonLabel={getLocalization(
           "services.engineering.actionLabel",
@@ -94,6 +93,22 @@ export default async function Services({
           getLocalization("services.business.secondList.second", lang),
           getLocalization("services.business.secondList.third", lang),
           getLocalization("services.business.secondList.fourth", lang),
+        ]}
+      />
+      <Divider variant="middle" />
+      <ContentWithList
+        lang={lang}
+        id={SOFTWARE}
+        title={getLocalization("services.software.title", lang)}
+        content={[getLocalization("services.software.description", lang)]}
+        listTitle={getLocalization("services.software.listTitle", lang)}
+        list={[
+          getLocalization("services.software.first", lang),
+          getLocalization("services.software.second", lang),
+          getLocalization("services.software.third", lang),
+          getLocalization("services.software.fourth", lang),
+          getLocalization("services.software.fifth", lang),
+          getLocalization("services.software.sixth", lang),
         ]}
       />
       <Divider variant="middle" />
