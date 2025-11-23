@@ -13,3 +13,17 @@
   align-items: flex-start;
   gap: 5px;
 }
+
+@media (prefers-color-scheme: dark) {
+  .imagesContainer {
+    background-color: var(--background);
+  }
+
+  .imageContainer h2 {
+    color: #ffffff;
+  }
+
+  .imageContainer p {
+    color: rgba(255, 255, 255, 0.8);
+  }
+}

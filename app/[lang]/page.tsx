@@ -1,4 +1,3 @@
-import { Divider } from "@mui/material";
 import { Hero } from "../_components/hero/hero";
 import { GridWithContent } from "../_components/content/gridWithContent";
 import { ContentWithTitle } from "../_components/content/contentWithTitle";
@@ -27,30 +26,31 @@ export default async function Home({
           getLocalization("whoWeAre.third", lang),
         ]}
       />
-      <Divider variant="middle" />
-      <GridWithContent
-        title={getLocalization("expertise.title", lang)}
-        size={{ xs: 12, md: 6 }}
-        lang={lang}
-        items={[
-          {
-            id: ENGINEERING,
-            title: getLocalization("expertise.engineering.title", lang),
-            description: getLocalization(
-              "expertise.engineering.description",
-              lang
-            ),
-          },
-          {
-            id: BUSINESS,
-            title: getLocalization("expertise.business.title", lang),
-            description: getLocalization(
-              "expertise.business.description",
-              lang
-            ),
-          },
-        ]}
-      />
+      <div style={{ background: "var(--gray-light)" }}>
+        <GridWithContent
+          title={getLocalization("expertise.title", lang)}
+          size={{ xs: 12, md: 6 }}
+          lang={lang}
+          items={[
+            {
+              id: ENGINEERING,
+              title: getLocalization("expertise.engineering.title", lang),
+              description: getLocalization(
+                "expertise.engineering.description",
+                lang
+              ),
+            },
+            {
+              id: BUSINESS,
+              title: getLocalization("expertise.business.title", lang),
+              description: getLocalization(
+                "expertise.business.description",
+                lang
+              ),
+            },
+          ]}
+        />
+      </div>
     </main>
   );
 }
