@@ -1,16 +1,14 @@
 import { Divider } from "@mui/material";
 import { Hero } from "../../_components/hero/hero";
-import { extractLang, getLocalization, Lang } from "../../localization";
+import { extractLang, getLocalization } from "../../localization";
 import { ContentWithList } from "../../_components/content/contentWithList";
 import { BUSINESS, ENGINEERING, OTHER, SOFTWARE } from "../../constants";
 import { Metadata } from "next";
 
-export async function generateMetadata({
-  params,
-}: {
-  params: Promise<{ lang: Lang }>;
+export async function generateMetadata(props: {
+  params: Promise<{ lang: string }>;
 }): Promise<Metadata> {
-  const lang = await extractLang(params);
+  const lang = await extractLang(props.params);
   const title = `${getLocalization("services.hero.title", lang)} - NEROM`;
   const description = getLocalization("services.engineering.description", lang);
 
@@ -30,12 +28,10 @@ export async function generateMetadata({
   };
 }
 
-export default async function Services({
-  params,
-}: {
-  params: Promise<{ lang: Lang }>;
+export default async function Services(props: {
+  params: Promise<{ lang: string }>;
 }) {
-  const lang = await extractLang(params);
+  const lang = await extractLang(props.params);
   return (
     <main>
       <Hero

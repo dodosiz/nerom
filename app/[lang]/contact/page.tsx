@@ -1,19 +1,17 @@
 import { Container } from "../../_components/container/container";
 import { ContentWithTitle } from "../../_components/content/contentWithTitle";
 import { Hero } from "../../_components/hero/hero";
-import { extractLang, getLocalization, Lang } from "../../localization";
+import { extractLang, getLocalization } from "../../localization";
 import EmailIcon from "@mui/icons-material/Email";
 import LocalPhoneIcon from "@mui/icons-material/LocalPhone";
 import BusinessIcon from "@mui/icons-material/Business";
 import { ContactForm } from "../../_components/contactForm/contactForm";
 import { Metadata } from "next";
 
-export async function generateMetadata({
-  params,
-}: {
-  params: Promise<{ lang: Lang }>;
+export async function generateMetadata(props: {
+  params: Promise<{ lang: string }>;
 }): Promise<Metadata> {
-  const lang = await extractLang(params);
+  const lang = await extractLang(props.params);
   const title = `${getLocalization("contact.hero.title", lang)} - NEROM`;
   const description = getLocalization("contact.content", lang);
 
@@ -33,12 +31,10 @@ export async function generateMetadata({
   };
 }
 
-export default async function Contact({
-  params,
-}: {
-  params: Promise<{ lang: Lang }>;
+export default async function Contact(props: {
+  params: Promise<{ lang: string }>;
 }) {
-  const lang = await extractLang(params);
+  const lang = await extractLang(props.params);
   return (
     <main>
       <Hero

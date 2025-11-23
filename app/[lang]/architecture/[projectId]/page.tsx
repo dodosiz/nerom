@@ -1,16 +1,16 @@
 import { notFound } from "next/navigation";
 import { PROJECTS } from "../../../_data/projects";
-import { getLocalization, Lang } from "../../../localization";
+import { extractLang, getLocalization } from "../../../localization";
 import { ArchProject } from "../../../_components/archProject/archProject";
 import { Hero } from "../../../_components/hero/hero";
 import { Metadata } from "next";
 
-export async function generateMetadata({
-  params,
-}: {
-  params: Promise<{ lang: Lang; projectId: string }>;
+export async function generateMetadata(props: {
+  params: Promise<{ lang: string; projectId: string }>;
 }): Promise<Metadata> {
-  const { lang, projectId } = await params;
+  const params = await props.params;
+  const { lang: rawLang, projectId } = params;
+  const lang = await extractLang(Promise.resolve({ lang: rawLang }));
   const project = PROJECTS.find((p) => p.id === projectId);
 
   if (!project) {
@@ -40,12 +40,12 @@ export async function generateMetadata({
   };
 }
 
-export default async function ArchitectureProject({
-  params,
-}: {
-  params: Promise<{ lang: Lang; projectId: string }>;
+export default async function ArchitectureProject(props: {
+  params: Promise<{ lang: string; projectId: string }>;
 }) {
-  const { lang, projectId } = await params;
+  const params = await props.params;
+  const { lang: rawLang, projectId } = params;
+  const lang = await extractLang(Promise.resolve({ lang: rawLang }));
   const project = PROJECTS.find((p) => p.id === projectId);
   if (!project) {
     notFound();

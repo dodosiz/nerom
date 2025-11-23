@@ -1,7 +1,7 @@
 import { Hero } from "../_components/hero/hero";
 import { GridWithContent } from "../_components/content/gridWithContent";
 import { ContentWithTitle } from "../_components/content/contentWithTitle";
-import { extractLang, getLocalization, Lang } from "../localization";
+import { extractLang, getLocalization } from "../localization";
 import { BUSINESS, ENGINEERING, SOFTWARE } from "../constants";
 import { Metadata } from "next";
 import {
@@ -10,12 +10,10 @@ import {
   ServiceStructuredData,
 } from "../_components/structuredData/structuredData";
 
-export async function generateMetadata({
-  params,
-}: {
-  params: Promise<{ lang: Lang }>;
+export async function generateMetadata(props: {
+  params: Promise<{ lang: string }>;
 }): Promise<Metadata> {
-  const lang = await extractLang(params);
+  const lang = await extractLang(props.params);
   const title = "NEROM Engineering & Business Services";
   const description = getLocalization("whoWeAre.first", lang);
 
@@ -35,12 +33,10 @@ export async function generateMetadata({
   };
 }
 
-export default async function Home({
-  params,
-}: {
-  params: Promise<{ lang: Lang }>;
+export default async function Home(props: {
+  params: Promise<{ lang: string }>;
 }) {
-  const lang = await extractLang(params);
+  const lang = await extractLang(props.params);
   return (
     <main>
       <OrganizationStructuredData lang={lang} />

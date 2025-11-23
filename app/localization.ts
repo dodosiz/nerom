@@ -94,7 +94,7 @@ const content = {
         title: "Software Engineering",
         description:
           "NEROM Engineering Business & Services offers comprehensive software engineering services, delivering modern, scalable, and secure digital solutions. With expertise in full-stack development, cloud technologies, and system architecture, we support businesses in building efficient applications that drive innovation and digital transformation.",
-      }
+      },
     },
     services: {
       hero: {
@@ -144,14 +144,17 @@ const content = {
       },
       software: {
         title: "Software Engineering",
-        description: "At NEROM Engineering Business & Services, we provide expert software engineering services focused on building robust, scalable, and modern digital solutions. With hands-on experience in full-stack development and cloud technologies, we deliver enterprise-grade applications tailored to meet our clients' evolving needs.",
+        description:
+          "At NEROM Engineering Business & Services, we provide expert software engineering services focused on building robust, scalable, and modern digital solutions. With hands-on experience in full-stack development and cloud technologies, we deliver enterprise-grade applications tailored to meet our clients' evolving needs.",
         listTitle: "The above include:",
-        first: "Custom enterprise software development (frontend with React, backend with NestJS or Spring Boot)",
+        first:
+          "Custom enterprise software development (frontend with React, backend with NestJS or Spring Boot)",
         second: "Full-stack application architecture and implementation",
         third: "API design and integration for complex systems",
         fourth: "Database modeling and management (PostgreSQL, MySQL)",
-        fifth: "Containerization with Docker and orchestration using Kubernetes",
-        sixth: "CI/CD pipeline setup and cloud deployment (AWS)"
+        fifth:
+          "Containerization with Docker and orchestration using Kubernetes",
+        sixth: "CI/CD pipeline setup and cloud deployment (AWS)",
       },
       other: {
         title: "Other services",
@@ -343,7 +346,7 @@ const content = {
         title: "Μηχανική Λογισμικού",
         description:
           "Η NEROM Engineering Business & Services προσφέρει ολοκληρωμένες υπηρεσίες μηχανικής λογισμικού, παρέχοντας σύγχρονες, επεκτάσιμες και ασφαλείς ψηφιακές λύσεις. Με εξειδίκευση σε full-stack ανάπτυξη, τεχνολογίες cloud και αρχιτεκτονική συστημάτων, υποστηρίζουμε τις επιχειρήσεις στην ανάπτυξη αποδοτικών εφαρμογών που προωθούν την καινοτομία και τον ψηφιακό μετασχηματισμό.",
-      }
+      },
     },
     services: {
       hero: {
@@ -394,14 +397,18 @@ const content = {
       },
       software: {
         title: "Μηχανική Λογισμικού",
-        description: "Στην NEROM Engineering Business & Services, προσφέρουμε εξειδικευμένες υπηρεσίες μηχανικής λογισμικού με στόχο τη δημιουργία αξιόπιστων, επεκτάσιμων και σύγχρονων ψηφιακών λύσεων. Αξιοποιώντας εμπειρία σε full-stack ανάπτυξη και τεχνολογίες cloud, παραδίδουμε επιχειρησιακού επιπέδου εφαρμογές προσαρμοσμένες στις εξελισσόμενες ανάγκες των πελατών μας.",
+        description:
+          "Στην NEROM Engineering Business & Services, προσφέρουμε εξειδικευμένες υπηρεσίες μηχανικής λογισμικού με στόχο τη δημιουργία αξιόπιστων, επεκτάσιμων και σύγχρονων ψηφιακών λύσεων. Αξιοποιώντας εμπειρία σε full-stack ανάπτυξη και τεχνολογίες cloud, παραδίδουμε επιχειρησιακού επιπέδου εφαρμογές προσαρμοσμένες στις εξελισσόμενες ανάγκες των πελατών μας.",
         listTitle: "Οι υπηρεσίες περιλαμβάνουν:",
-        first: "Ανάπτυξη προσαρμοσμένου επιχειρησιακού λογισμικού (frontend με React, backend με NestJS ή Spring Boot)",
+        first:
+          "Ανάπτυξη προσαρμοσμένου επιχειρησιακού λογισμικού (frontend με React, backend με NestJS ή Spring Boot)",
         second: "Αρχιτεκτονική και υλοποίηση full-stack εφαρμογών",
         third: "Σχεδιασμός και ενσωμάτωση API για σύνθετα συστήματα",
-        fourth: "Μοντελοποίηση και διαχείριση βάσεων δεδομένων (PostgreSQL, MySQL)",
+        fourth:
+          "Μοντελοποίηση και διαχείριση βάσεων δεδομένων (PostgreSQL, MySQL)",
         fifth: "Containerization με Docker και ορχήστρωση με Kubernetes",
-        sixth: "Δημιουργία CI/CD pipelines και ανάπτυξη σε cloud περιβάλλον (AWS)"
+        sixth:
+          "Δημιουργία CI/CD pipelines και ανάπτυξη σε cloud περιβάλλον (AWS)",
       },
       other: {
         title: "Άλλες υπηρεσίες",
@@ -520,10 +527,12 @@ export function getLocalization(key: string, lang: Lang) {
   return result;
 }
 
-export async function extractLang(params: Promise<{ lang: Lang }>) {
+export async function extractLang(
+  params: Promise<{ lang: string }>
+): Promise<Lang> {
   const { lang } = await params;
   if (lang !== "en" && lang !== "el") {
     redirect("/en");
   }
-  return lang;
+  return lang as Lang;
 }

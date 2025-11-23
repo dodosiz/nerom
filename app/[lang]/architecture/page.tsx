@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { Hero } from "../../_components/hero/hero";
-import { extractLang, getLocalization, Lang } from "../../localization";
+import { extractLang, getLocalization } from "../../localization";
 import {
   Box,
   Card,
@@ -12,12 +12,10 @@ import { ImageData, PROJECTS } from "../../_data/projects";
 import styles from "./architecture.module.css";
 import { Metadata } from "next";
 
-export async function generateMetadata({
-  params,
-}: {
-  params: Promise<{ lang: Lang }>;
+export async function generateMetadata(props: {
+  params: Promise<{ lang: string }>;
 }): Promise<Metadata> {
-  const lang = await extractLang(params);
+  const lang = await extractLang(props.params);
   const title = `${getLocalization("architecture.title", lang)} - NEROM`;
   const description = getLocalization("architecture.description", lang);
 
@@ -37,12 +35,10 @@ export async function generateMetadata({
   };
 }
 
-export default async function Architecture({
-  params,
-}: {
-  params: Promise<{ lang: Lang }>;
+export default async function Architecture(props: {
+  params: Promise<{ lang: string }>;
 }) {
-  const lang = await extractLang(params);
+  const lang = await extractLang(props.params);
   return (
     <main>
       <Hero

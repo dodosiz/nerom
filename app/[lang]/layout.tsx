@@ -2,15 +2,13 @@ import "../globals.css";
 import { NavigationMenu } from "../_components/navigationMenu/navigationMenu";
 import { Footer } from "../_components/footer/footer";
 import { LangSelect } from "../_components/langSelect/langSelect";
-import { extractLang, Lang } from "../localization";
+import { extractLang } from "../localization";
 import { Metadata } from "next";
 
-export async function generateMetadata({
-  params,
-}: {
-  params: Promise<{ lang: Lang }>;
+export async function generateMetadata(props: {
+  params: Promise<{ lang: string }>;
 }): Promise<Metadata> {
-  const lang = await extractLang(params);
+  const lang = await extractLang(props.params);
   const baseUrl = "https://www.nerom-ebs.gr";
 
   return {
@@ -34,18 +32,17 @@ export async function generateMetadata({
   };
 }
 
-export default async function RootLayout({
-  children,
-  params,
-}: Readonly<{
-  children: React.ReactNode;
-  params: Promise<{ lang: Lang }>;
-}>) {
-  const lang = await extractLang(params);
+export default async function RootLayout(
+  props: Readonly<{
+    children: React.ReactNode;
+    params: Promise<{ lang: string }>;
+  }>
+) {
+  const lang = await extractLang(props.params);
   return (
     <div lang={lang}>
       <NavigationMenu lang={lang} />
-      {children}
+      {props.children}
       <LangSelect lang={lang} />
       <Footer lang={lang} />
     </div>

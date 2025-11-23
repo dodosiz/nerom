@@ -1,14 +1,12 @@
 import { Container } from "../../_components/container/container";
 import { Hero } from "../../_components/hero/hero";
-import { extractLang, getLocalization, Lang } from "../../localization";
+import { extractLang, getLocalization } from "../../localization";
 import { Metadata } from "next";
 
-export async function generateMetadata({
-  params,
-}: {
-  params: Promise<{ lang: Lang }>;
+export async function generateMetadata(props: {
+  params: Promise<{ lang: string }>;
 }): Promise<Metadata> {
-  const lang = await extractLang(params);
+  const lang = await extractLang(props.params);
   const title = `${getLocalization("privacy.heading", lang)} - NEROM`;
   const description = getLocalization("privacy.intro", lang);
 
@@ -26,12 +24,10 @@ export async function generateMetadata({
   };
 }
 
-export default async function Privacy({
-  params,
-}: {
-  params: Promise<{ lang: Lang }>;
+export default async function Privacy(props: {
+  params: Promise<{ lang: string }>;
 }) {
-  const lang = await extractLang(params);
+  const lang = await extractLang(props.params);
   return (
     <main>
       <Hero

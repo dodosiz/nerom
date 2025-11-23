@@ -1,13 +1,11 @@
 import { ContentWithTitle } from "../../../_components/content/contentWithTitle";
 import { Hero } from "../../../_components/hero/hero";
-import { extractLang, getLocalization, Lang } from "../../../localization";
+import { extractLang, getLocalization } from "../../../localization";
 
-export default async function Contact({
-  params,
-}: {
-  params: Promise<{ lang: Lang }>;
+export default async function Contact(props: {
+  params: Promise<{ lang: string }>;
 }) {
-  const lang = await extractLang(params);
+  const lang = await extractLang(props.params);
   return (
     <main>
       <Hero
